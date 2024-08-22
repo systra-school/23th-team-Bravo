@@ -144,7 +144,7 @@
         scope="session"
         validate="true">
         <forward name="success" path="/pages/mst/shiftMstMnt.jsp"/>
-        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp" redirect="true"/>
+        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp" />
       </action>
       <!-- シフトマスタメンテナンス 更新 -->
       <action
