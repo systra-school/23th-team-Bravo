@@ -84,7 +84,7 @@
             </div>
             <div style="height:450px;overflow:auto">
               <table class="tableBody">
-                <logic:iterate id="baseShiftPatternBeanList" name="baseShiftMstMntForm"  property="baseShiftPatternBean" indexId="idx">
+                <logic:iterate id="baseShiftPatternBeanList" name="baseShiftMstMntForm"  property="baseShiftPatternBeanList" indexId="idx">
                   <tr>
                     <td width="100px" align="center">
                       <bean:write property="shiftName" name="baseShiftPatternBeanList"/>
