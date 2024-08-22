@@ -189,7 +189,8 @@
         type="action.shk.WorkDateRequestCheckInitAction"
         name="workDateRequestCheckForm"
         scope="session">
-        <forward name="success" path="pages/shk/workDateRequestCheck.jsp"/>
+        <!--2024.08.22/井上貴史　pagesの前にスラッシュを追加。  -->
+        <forward name="success" path="/pages/shk/workDateRequestCheck.jsp"/>
       </action>
       <!-- 出勤希望日確認 -->
       <action
