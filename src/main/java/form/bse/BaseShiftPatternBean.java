@@ -29,10 +29,10 @@ public class BaseShiftPatternBean {
 		this.shiftName = shiftName;
 	}
 	public String getSymbol() {
-		return shiftName;
+		return symbol;
 	}
-	public void setSymbol(String shiftName) {
-		this.shiftName = shiftName;
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
 	}
 	public String getTimeZone() {
 		return timeZone;
