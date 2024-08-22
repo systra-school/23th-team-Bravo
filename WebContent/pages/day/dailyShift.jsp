@@ -84,7 +84,7 @@
               日別シフト確認画面
             </td>
             <td id="headRight">
-            	<input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+            	<input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
             
             </td>
           </tr>

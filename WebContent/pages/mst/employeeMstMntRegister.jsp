@@ -85,7 +85,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/employeeMstMntRegisterBack.do')" />
+              <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
               <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
             <td id="headCenter">

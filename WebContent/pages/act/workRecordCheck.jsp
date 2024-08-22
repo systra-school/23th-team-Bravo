@@ -46,7 +46,7 @@ String color = "";
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
             </td>
             <td id="headCenter">
               勤務実績確認

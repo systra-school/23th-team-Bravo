@@ -57,7 +57,7 @@
         <table  class="centered-container">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-Struts-bug/menu.do')" />
+              <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
             </td>
             <td id="headCenter">
               出勤希望確認
