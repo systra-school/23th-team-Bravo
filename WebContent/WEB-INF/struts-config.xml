@@ -148,7 +148,7 @@
       </action>
       <!-- シフトマスタメンテナンス 更新 -->
       <action
-        path="/shiftMstMntUpdata"
+        path="/shiftMstMntUpdate"
         type="action.mst.ShiftMstMntUpdateAction"
         name="shiftMstMntForm"
         scope="session"
