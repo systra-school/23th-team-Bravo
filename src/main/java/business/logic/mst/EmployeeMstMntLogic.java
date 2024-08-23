@@ -112,7 +112,7 @@ public class EmployeeMstMntLogic {
         // 自分をリストから省く
         // 削除対象
         EmployeeMstMntDto removeM_employeeDto = null;
-        m_employeeList = null;
+        //m_employeeList = null;この行を消去
 
         for (EmployeeMstMntDto m_employeeDto : m_employeeList) {
         	
