@@ -144,9 +144,13 @@
         scope="session"
         validate="true">
         <forward name="success" path="/pages/mst/shiftMstMnt.jsp"/>
-        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp" />
+        
+        <!-- 2024.8.22 大石 redirect="true"を削除  -->
+        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp" redirect="true" />
       </action>
+      
       <!-- シフトマスタメンテナンス 更新 -->
+      <!-- 2024.8.22 大石 pathのUpdataをUpdateに変更 -->
       <action
         path="/shiftMstMntUpdate"
         type="action.mst.ShiftMstMntUpdateAction"
