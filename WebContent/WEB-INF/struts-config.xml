@@ -146,7 +146,7 @@
         <forward name="success" path="/pages/mst/shiftMstMnt.jsp"/>
         
         <!-- 2024.8.22 大石 redirect="true"を削除  -->
-        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp" redirect="true" />
+        <forward name="nodata" path="/pages/mst/shiftMstMnt.jsp"/>
       </action>
       
       <!-- シフトマスタメンテナンス 更新 -->
