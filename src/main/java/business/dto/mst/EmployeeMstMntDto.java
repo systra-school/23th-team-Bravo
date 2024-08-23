@@ -36,17 +36,17 @@ public class EmployeeMstMntDto {
     /** 削除フラグ */
     private boolean deleteFlg;
     
-    
+    //return password;をreturn employeeId;に修正
 	public String getEmployeeId() {
-		return password;
+		return employeeId;
 	}
 
 	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
-
+	//return employeeId;をreturn password;に修正
 	public String getPassword() {
-		return employeeId;
+		return password;
 	}
 
 	public void setPassword(String password) {
