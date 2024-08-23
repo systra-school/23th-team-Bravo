@@ -261,6 +261,7 @@
         name="dailyShiftForm"
         scope="session">
         <forward name="success" path="/pages/day/dailyShift.jsp"/>
+        <forward name="nodata" path="/pages/day/dailyShift.jsp"/><!--20240823 副島： nodataの際の画面遷移先を追加  -->
       </action>
       <!-- 日別シフト改ページ -->
       <action
