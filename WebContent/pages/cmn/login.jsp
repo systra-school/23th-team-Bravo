@@ -50,7 +50,7 @@
 					<html:text property="employeeId" size="16" value="sh0001" />
 					<br />
 					<html:password property="password" size="16" redisplay="false"
-						value="sh0002" />
+					 />
 					<br />
 					<br />
 					<html:submit property="submit" value="ログイン" />
