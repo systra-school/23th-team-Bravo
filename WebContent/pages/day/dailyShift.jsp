@@ -77,14 +77,16 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-            	<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+            	<input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
+				<!--ログアウトボタンの位置入れ替え。 -->
             
             </td>
             <td id="headCenter">
               日別シフト確認画面
             </td>
             <td id="headRight">
-            	<input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
+            	<input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
+            	<!--戻るボタンの位置入れ替え。 -->
             
             </td>
           </tr>
