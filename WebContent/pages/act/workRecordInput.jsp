@@ -242,7 +242,8 @@
                     <bean:write name="workRecordInputList" property="symbol" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></bean:write><br>
+                    <!-- 2024/08/23/尾崎/bean:writeをhtml:textに修正 -->
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
