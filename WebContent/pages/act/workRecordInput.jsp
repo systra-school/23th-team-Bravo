@@ -170,7 +170,8 @@
             </div>
             <div style="float: left; width: 284px; text-align: left;">
               社員ID&nbsp;<bean:write name="workRecordInputForm" property="employeeId"/>
-              ：社員名&nbsp;残念エラーです
+              ：社員名&nbsp;<bean:write name="workRecordInputForm" property="employeeName"/>
+<!--               ：社員名&nbsp;残念エラーです -->
             </div>
           </div>
           <div  id="data">
