@@ -119,9 +119,10 @@
         <forward name="success" path="/pages/mst/employeeMstMntRegister.jsp"/>
       </action>
       <!-- 社員マスタメンテナンス 登録 -->
+      <!-- 2024/08/26/尾崎/typeのActionを追加 -->
       <action
         path="/employeeMstMntRegister"
-        type="action.mst.EmployeeMstMntRegister"
+        type="action.mst.EmployeeMstMntRegisterAction"
         name="employeeMstMntRegisterForm"
         scope="session"
         validate="true">
