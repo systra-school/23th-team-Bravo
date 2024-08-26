@@ -57,10 +57,10 @@
                 password.style.backgroundColor = 'red';
             }
             // 社員名カナ
-            if (!checkTime(employeeNameKanaVar)) {
+            if (!checkHalfWidthKana(employeeNameKanaVar)) {//エラーコードの修正
                 // エラー有り
                 var strArr = ['社員名カナ'];
-                errorMsg += getMessage('E-MSG-000006', strArr);
+                errorMsg += getMessage('E-MSG-000003', strArr);//エラーメッセージの変更
                 employeeNameKana.style.backgroundColor = 'red';
             }
 
@@ -86,12 +86,13 @@
           <tr>
             <td id="headLeft">
               <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
-            </td>
+              </td>
             <td id="headCenter">
               社員マスタメンテナンス画面（新規登録）
             </td>
+            <!-- ログアウトボタンの配置を修正 -->
             <td id="headRight">
+              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
             </td>
           </tr>
         </table>
@@ -104,11 +105,12 @@
                 <td width="150px" align="center">
                   パスワード
                 </td>
-                <td width="200px" align="center">
-                  社員名カナ
-                </td>
+                <!-- 社員名とカナの配置を変更 -->
                 <td width="200px" align="center">
                   社員名
+                </td>
+                <td width="200px" align="center">
+                  社員名カナ
                 </td>
                 <td width="100px" align="center">
                   権限
@@ -125,11 +127,12 @@
                 <td width="200px"  align="center">
                   <html:text property="employeeName" value="" size="20" />
                 </td>
-                
+                <!-- 131行目を追加 -->
+                <td width="200px"  align="center">
                   <html:text property="employeeNameKana" value="" size="20" />
-               
+               </td>
                 <td width="100px" align="center">
-                  <html:select property="authorityId" value="01">
+                  <html:select property="authorityId">
                     <html:optionsCollection name="employeeMstMntForm"
                                             property="authorityCmbMap"
                                             value="key"
