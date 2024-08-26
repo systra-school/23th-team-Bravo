@@ -167,7 +167,8 @@
         name="shiftMstMntForm" 
         scope="session"
         validate="true">
-        <forward name="success" path="/pages/cmn/menu.jsp" redirect="true"/>
+        <!--2024.08.26井上 path名を"/pages/cmn/menu.jsp"から"/pages/mst/shiftMstMntRegister.jsp"に変更 -->
+        <forward name="success" path="/pages/mst/shiftMstMntRegister.jsp" redirect="true"/>
       </action>
       <!-- シフトマスタメンテナンス 登録 -->
       <action
