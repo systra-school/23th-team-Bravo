@@ -92,9 +92,7 @@
               <input type="submit" value="シフトマスタメンテナンス" class="bigButton" />
             </html:form>
             
-            <html:form action="/workDateRequestInputInit">
-              <input type="submit" value="出勤希望日入力" class="bigButton" />
-            </html:form>
+           <!-- 出勤希望日入力を消去 -->
             
             
           </div>
