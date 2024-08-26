@@ -175,7 +175,8 @@
             </div>
           </div>
           <div  id="data">
-            <div>
+            <div style="margin-left: 18px ">
+            <!-- 2024/08/26/宮平/style="margin-left: 18px "を追加 -->
             <table class="tableHeader">
               <tr>
                 <td width="80px" align="center">
