@@ -79,7 +79,9 @@
                                     label="value"/>
             </html:select>
             <html:link href="/kikin-for-Struts-bug/workDateRequestCheckPage.do?paging=back">前へ</html:link>
-            <html:link href="https://tomcat.apache.org/?paging=next">次へ</html:link>
+            <%-- 20240826 副島 : 次月へ遷移できるように修正 --%>
+            <%-- <html:link href="https://tomcat.apache.org/?paging=next">次へ</html:link> --%>
+            <html:link href="/kikin-for-Struts-bug/workDateRequestCheckPage.do?paging=next">次へ</html:link>
             <bean:write name="workDateRequestCheckForm" property="countPage"/>/
             <bean:write name="workDateRequestCheckForm" property="maxPage"/>
               <table class="widthTable">
@@ -160,7 +162,9 @@
           <tr>
             <td id="footLeft">
 	          <div style="margin-left:50px;">
-	            <input value="凡例表示" type="button" class="longButton"  onclick="openDow()" />
+	            <%-- 20240826 副島 出勤希望確認の凡例を表示する--%>
+	            <%-- <input value="凡例表示" type="button" class="longButton"  onclick="openDow()" />--%>
+	            <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" />
 	          </div>
             </td>
             <td id="footCenter">
