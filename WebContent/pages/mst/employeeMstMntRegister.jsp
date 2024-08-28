@@ -72,7 +72,8 @@
         }
 
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do');
+//2024.08.28井上 doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do');からdocument.forms[0].submit();に変更
+        document.forms[0].submit();
     }
     </script>
     <title>社員マスタメンテナンス画面</title>
