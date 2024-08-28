@@ -450,7 +450,7 @@ if (listSize > intShowLength) {
             <div style="margin-left:50px;white-space: nowrap;">
 	          <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" />
 	          <input value="基本シフト反映" type="button" class="longButton"   onclick="submitImportKihon()"/>
-	          <input value="出勤希望日反映" type="button" class="longButton"  onclick="submitImportKihon()" />
+	          <input value="出勤希望日反映" type="button" class="longButton"  onclick="submitWorkDateRequest()" /><!-- 2024/08/28/尾崎/submitWorkDateRequest()を追加 -->
 	        </div>
             </td>
             <td id="footCenter" style="text-align: right;">
