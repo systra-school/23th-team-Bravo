@@ -196,8 +196,8 @@ if (listSize > intShowLength) {
         <table>
           <tr>
             <td id="footLeft">
-              <input value="凡例表示" type="button" class="longButton"  onclick="openWindo()" />
-              <input value="印刷" type="button" class="smallButton"  onclick="submitPrin()" />
+              <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" /><!-- 2024/08/26/尾崎Windowのスペルミス -->
+              <input value="印刷" type="button" class="smallButton"  onclick="submitPrint()" /><!-- 2024/08/26/尾崎Printのスペルミス -->
             </td>
             <td id="footCenter" style="text-align: right;">
             </td>
