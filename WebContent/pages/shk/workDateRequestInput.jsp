@@ -52,10 +52,15 @@
      * サブウィンドウを開く
      */
     function openWindow(){
-        window.open("https://tomcat.apache.org/?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+    	<!-- 20240828 副島 サブウィンドウの展開先がtomcatになってたのでkikin-for-Struts-bugに修正 -->
+        <!--window.open("https://tomcat.apache.org/?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");-->
+        window.open("/kikin-for-Struts-bug/shiftPattern.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+
     }
     function openSearch(){
-    	window.open("/kikin-for-Struts-bug/workDateCheckSubInit.do", "searchPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=1000px, height=600px")
+   		<!-- 20240826 副島 workDateCheckSubInitをworkDateRequestCheckInitに修正 -->
+    	<!--window.open("/kikin-for-Struts-bug/workDateCheckSubInit.do", "searchPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=1000px, height=600px")-->
+    	window.open("/kikin-for-Struts-bug/workDateRequestCheckInit.do", "searchPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=1000px, height=600px")
     }
     
     var str = user_Id;
@@ -68,6 +73,7 @@
 </head>
 <body>
 	<%String user_id = (String)session.getAttribute("session_cmn_login_user_id");  %>
+	
 	<div id = "wrapper">
 		<div id = "header">
 			<table class="full-width">
@@ -85,7 +91,8 @@
         	</table>
       	</div>
       	<div id="businessBody" style="overflow: hidden;">
-        <div style="margin-left:20%;">
+      	<%-- 20240828 副島 margin-leftをmargin-rightに変更--%>
+        <div style="margin-right:20%;">
           <html:form action="/workDateRequestInputInit" >
             表示年月：
             <html:select name="workDateRequestInputForm" property="yearMonth" onchange="submitSearch()">
