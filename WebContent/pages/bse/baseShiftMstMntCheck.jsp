@@ -47,7 +47,7 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-strus-bug/menu.do')" />
+              <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
             </td>
             <td id="headCenter">
               基本シフト確認
@@ -84,8 +84,12 @@
               <table class="tableBody">
                 <logic:iterate id="baseShiftPatternBeanList" name="baseShiftMstMntForm"  property="baseShiftPatternBeanList" indexId="idx">
                   <tr>
+                  <!-- 2024/09/02/尾崎/フォーマット修正とsymbolの追加 -->
                     <td width="100px" align="center">
                       <bean:write property="shiftName" name="baseShiftPatternBeanList"/>
+                    </td>
+                    <td width="150px" align="center">
+                      <bean:write property="symbol" name="baseShiftPatternBeanList"/>
                     </td>
                    
                     <td width="150px" align="center">
@@ -103,6 +107,9 @@
             <div>
               <table class="tableHeader">
                 <tr>
+                <td width="230px" align="center"><!-- 2024/09/02/尾崎/社員名を追加 -->
+                    社員名
+                  </td>
                   
                   <td width="50px" align="center">
                     月
