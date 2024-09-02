@@ -110,8 +110,9 @@
 	            // エラー
 	            return false;
 	        }
-
-	        doSubmit('/kikin-for-Struts-bug/workRecordInputRegister.do');
+	        
+	      //2024.09.02井上 doSubmit('/kikin-for-Struts-bug/workRecordInputRegister.do');からdocument.forms[0].submit();に変更
+	        document.forms[0].submit();
 	    }
 
     /**
