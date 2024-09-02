@@ -45,7 +45,8 @@ public class ComboListUtilsDao extends Dao {
 
         if (blankFlg) {
             // 空白あり
-            comboMap.put("-1", CommonConstant.BLANK);
+        	//2024.09.02 井上 ("-1", CommonConstant.BLANK)を("02", "一般")に変更
+            comboMap.put("02", "一般");
         }
 
         boolean displayBool = mcategorySearch.getDisplay();
