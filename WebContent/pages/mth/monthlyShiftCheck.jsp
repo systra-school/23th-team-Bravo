@@ -64,9 +64,12 @@ if (listSize > intShowLength) {
     /**
      * 検索
      */
-    function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftCheckSearch.do');
+    function submitSearch(action) {
+        document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftCheckSearch.do";
+        document.forms[0].submit();
     }
+    <!-- 2024/09/02/宮平/functionの書き換え -->
+    
     /**
      * サブウィンドウを開く
      */
@@ -103,7 +106,8 @@ if (listSize > intShowLength) {
               <div style="float: left; width: 804px; text-align: left; margin-left:13%;">
 	              表示年月：
 	              <bean:define id="sessionYearMonth" name="monthlyShiftCheckForm" property="yearMonth" type="String"/>
-	              <html:select property="yearMonth" name="monthlyShiftCheckForm"  onchange="submitSearch()">
+	              <html:select property="yearMonth" name="monthlyShiftCheckForm"  onchange="submitSearch('/kikin-for-Struts-bug/monthlyShiftCheckSearch.do')">
+	              <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/monthlyShiftCheckSearch.do')に書き換え -->
 	              <html:optionsCollection name="monthlyShiftCheckForm"
 	                                      property="yearMonthCmbMap"
 	                                      value="key"
