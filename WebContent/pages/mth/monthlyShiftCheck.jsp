@@ -57,10 +57,12 @@ if (listSize > intShowLength) {
     /**
      * 印刷
      */
-    function submitPrint() {
-        // サブミット
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftCheckPrint.do');
+    function submitPrint(action) {
+        document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftCheckPrint.do";
+        document.forms[0].submit();
     }
+    <!-- 2024/09/02/宮平/functionの書き換え -->
+    
     /**
      * 検索
      */
@@ -201,7 +203,8 @@ if (listSize > intShowLength) {
           <tr>
             <td id="footLeft">
               <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" /><!-- 2024/08/26/尾崎Windowのスペルミス -->
-              <input value="印刷" type="button" class="smallButton"  onclick="submitPrint()" /><!-- 2024/08/26/尾崎Printのスペルミス -->
+              <input value="印刷" type="button" class="smallButton"  onclick="submitPrint('/kikin-for-Struts-bug/monthlyShiftCheckPrint.do')" /><!-- 2024/08/26/尾崎Printのスペルミス -->
+	          <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/monthlyShiftCheckPrint.do')に書き換え -->
             </td>
             <td id="footCenter" style="text-align: right;">
             </td>

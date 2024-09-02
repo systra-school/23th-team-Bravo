@@ -34,6 +34,7 @@ String color = "";
         document.forms[0].action = "/kikin-for-Struts-bug/workRecordCheckSearch.do";
         document.forms[0].submit();
     }
+    <!-- 2024/09/02/宮平/functionの書き換え -->
 
     </script>
     <title>勤務実績確認画面</title>
