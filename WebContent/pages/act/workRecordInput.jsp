@@ -114,13 +114,10 @@
 	      //2024.09.02井上 doSubmit('/kikin-for-Struts-bug/workRecordInputRegister.do');からdocument.forms[0].submit();に変更
 	        document.forms[0].submit();
 	    }
-
-    /**
-     * 検索
-     */
-    function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workRecordInputSearch.do');
-    }
+	
+    
+    //検索functionを削除して、common.jsに移動。
+    
     
     </script>
     
@@ -162,7 +159,8 @@
           <div style="width: 100%;">
             <div style="float: left; width: 804px; text-align: left; margin-left:100px;">
               表示年月：
-              <html:select name="workRecordInputForm" property="yearMonth" onchange="submitSearch()">
+              <html:select name="workRecordInputForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workRecordInputSearch.do')">
+              <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workRecordInputSearch.do')に書き換え -->
               <html:optionsCollection name="workRecordInputForm"
                                       property="yearMonthCmbMap"
                                       value="key"
