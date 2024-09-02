@@ -119,7 +119,7 @@
             </html:form>
           </div>
 		  
-		  <%--〇 --%>
+		  
           <div class="menuBlock">
             <html:form action="/workDateRequestInputInit">
               <input type="submit" value="出勤希望日入力" class="bigButton" />
@@ -132,9 +132,10 @@
             </html:form>
           </div>
           
-           <html:form action="/shiftMstMnt">
+          <%-- 20240902 副島 シフトマスタメンテナンスボタンを外す --%>
+           <%-- <html:form action="/shiftMstMnt">
               <input type="submit" value="シフトマスタメンテナンス" class="bigButton" />
-            </html:form>
+            </html:form> --%>
           
           </div>
            </logic:equal>
