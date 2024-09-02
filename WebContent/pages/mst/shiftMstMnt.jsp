@@ -147,7 +147,8 @@
         <table class="full-width">
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="history.back()" />
+            <!-- 2024.09.02 井上 history.back()から doSubmit('/kikin-for-strus-bug/menu.do')に変更 -->
+              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-strus-bug/menu.do')" />
             </td>
             <td id="headCenter">
               シフトマスタメンテナンス

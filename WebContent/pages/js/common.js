@@ -18,7 +18,7 @@ function logout() {
  *  戻るボタンサブミット
  */
 function doSubmit(action) {
-	//2024.09.02 井上 actionからmenu.doに変更
-    document.forms[0].action = action;
+	//2024.09.02 井上 actionから"/kikin-for-Struts-bug/menu.do"に変更
+    document.forms[0].action = "/kikin-for-Struts-bug/menu.do";
     document.forms[0].submit();
 }
