@@ -46,10 +46,12 @@
     }
     /**
      * 検索
-     */
-    function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workDateRequestInputSearch.do');
+     */    
+    function submitSearch(action) {
+        document.forms[0].action = "/kikin-for-Struts-bug/workDateRequestInputSearch.do";
+        document.forms[0].submit();
     }
+    <!-- 2024/09/02/宮平/functionの書き換え -->
     /**
      * サブウィンドウを開く
      */
@@ -97,7 +99,8 @@
         <div style="margin-right:20%;">
           <html:form action="/workDateRequestInputInit" >
             表示年月：
-            <html:select name="workDateRequestInputForm" property="yearMonth" onchange="submitSearch()">
+            <html:select name="workDateRequestInputForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workDateRequestInputSearch.do')">
+            <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workDateRequestInputSearch.do')に書き換え -->
             	<html:optionsCollection name="workDateRequestInputForm"
                                     property="yearMonthCmbMap"
                                     value="key"

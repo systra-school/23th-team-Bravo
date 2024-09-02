@@ -37,10 +37,12 @@
     <script type="text/javascript">
     /**
      * 検索
-     */
-    function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workDateRequestCheckSubSearch.do');
+     */    
+    function submitSearch(action) {
+        document.forms[0].action = "/kikin-for-Struts-bug/workDateRequestCheckSubSearch.do";
+        document.forms[0].submit();
     }
+    <!-- 2024/09/02/宮平/functionの書き換え -->
     </script>
     <title>出勤希望確認画面</title>
 
@@ -67,7 +69,8 @@
         <div id = "resize">
           <html:form action="/workDateRequestCheckInit" >
             表示年月：
-            <html:select name="workDateRequestCheckForm" property="yearMonth" onchange="submitSearch()">
+            <html:select name="workDateRequestCheckForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workDateRequestCheckSubSearch.do')">
+            <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workDateRequestCheckSubSearch.do')に書き換え -->
             <html:optionsCollection name="workDateRequestCheckForm"
                                     property="yearMonthCmbMap"
                                     value="key"
