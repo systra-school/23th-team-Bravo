@@ -40,7 +40,9 @@
      */
     function submitRegister() {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/workDateRequestInputRegister.do');
+        //20240902 副島 登録ボタンをサブミットできるようにする
+    	//doSubmit('/kikin-for-Struts-bug/workDateRequestInputRegister.do');
+        document.forms[0].submit();
     }
     /**
      * 検索
