@@ -36,6 +36,7 @@
       <form-bean name="monthlyShiftCheckForm" type="form.mth.MonthlyShiftCheckForm"/>
       <!-- シフト凡例画面フォーム -->
       <form-bean name="shiftPatternForm" type="form.cmn.ShiftPatternForm"/>
+      
     </form-beans>
 
     <global-exceptions>
@@ -73,7 +74,7 @@
         name="loginForm"
         scope="session"
         validate="false">
-        <forward name="success" path="/pages/cmn/menu.jsp"/>
+        <forward name="success" path="/pages/cmn/login.jsp"/><!-- 2024/09/02/尾崎/pathをmenuからlogin.jspに変更 -->
       </action>
 
       <!-- メニュー -->
@@ -432,7 +433,7 @@
         scope="session">
         <forward name="success" path="/pages/cmn/shiftPattern.jsp"/>
       </action>
-      
+     
        <!-- 出勤希望日入力初期表示 -->
       <action
         path="/workDateRequestInputInit"

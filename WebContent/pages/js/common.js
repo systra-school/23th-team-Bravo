@@ -9,7 +9,7 @@
 /**
  *  ログアウトボタンサブミット
  */
-function logout() {
+function logout(action) {//2024.09.02 尾崎 actionを追加
     document.forms[0].action = "/kikin-for-Struts-bug/logout.do";
     document.forms[0].submit();
 }
