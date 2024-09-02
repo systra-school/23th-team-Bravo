@@ -173,9 +173,11 @@ public class MonthlyShiftDao extends Dao{
             strSql.append("? ");
             strSql.append(",? ");
             strSql.append(",? ");
+            strSql.append(",? ");//2024/09/02/尾崎/?を追加
             strSql.append(", current_timestamp()");
             strSql.append(",? ");
             strSql.append(", current_timestamp()");
+            
             strSql.append(") ");
 
             PreparedStatement ps = connection.prepareStatement(strSql.toString());

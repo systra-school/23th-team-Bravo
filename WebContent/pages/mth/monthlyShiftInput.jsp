@@ -70,9 +70,11 @@ if (listSize > intShowLength) {
     /**
      * 登録
      */
-    function submitRegister() {
+     <!-- 2024/09/02/尾崎/functionの書き換え -->
+    function submitRegister(action) {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftInputRegister.do');
+        document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftInputRegister.do";
+        document.forms[0].submit();
     }
     
     /**
@@ -460,7 +462,8 @@ if (listSize > intShowLength) {
 
             </td>
             <td id="footRight">
-              <input value="登録" type="button" class="smallButton"  onclick="submitRegister()" />
+            <!-- 2024/09/02/尾崎/onclickの修正 -->
+              <input value="登録" type="button" class="smallButton"  onclick="submitRegister('/kikin-for-Struts-bug/monthlyShiftInputRegister.do')" />
             </td>
           </tr>
         </table>
