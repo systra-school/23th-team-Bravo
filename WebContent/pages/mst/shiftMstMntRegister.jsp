@@ -143,10 +143,10 @@
             <table class="tableBody">
               <tr>
                 <td width="180px"  align="center">
-                  <html:text property="symbol" size="20" maxlength="10"  value=""/>
+                  <html:text property="shiftName" size="20" maxlength="10"  value=""/>
                 </td>
                 <td width="70px"  align="center">
-                  <html:text property="shiftName" size="2" maxlength="2"  value=""/>
+                  <html:text property="symbol" size="2" maxlength="2"  value=""/>
                 </td>
                 <td width="270px"  align="center">
                   <table class="full-width" >
