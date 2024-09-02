@@ -26,13 +26,13 @@ String color = "";
     <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/message.js"></script>
     <script type="text/javascript">
-
-
+    
     /**
      * 検索
-     */
-    function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workRecordCheckSearch.do');
+     */    
+    function submitSearch(action) {
+        document.forms[0].action = "/kikin-for-Struts-bug/workRecordCheckSearch.do";
+        document.forms[0].submit();
     }
 
     </script>
@@ -63,7 +63,8 @@ String color = "";
           <div style="float: left; width: 100%;">
             <div style="float: left; width: 804px; text-align: left; margin-left:22%;">
               表示年月：
-              <html:select name="workRecordCheckForm" property="yearMonth" onchange="submitSearch()">
+              <html:select name="workRecordCheckForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workRecordCheckSearch.do')">
+              <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workRecordCheckSearch.do')に書き換え -->
               <html:optionsCollection name="workRecordCheckForm"
                                       property="yearMonthCmbMap"
                                       value="key"

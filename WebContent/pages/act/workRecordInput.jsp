@@ -115,10 +115,15 @@
 	        document.forms[0].submit();
 	    }
 	
-    
-    //検索functionを削除して、common.jsに移動。
-    
-    
+	    /**
+	     * 検索
+	     */    
+	    function submitSearch(action) {
+	        document.forms[0].action = "/kikin-for-Struts-bug/workRecordInputSearch.do";
+	        document.forms[0].submit();
+	    }
+        <!-- 2024/09/02/宮平/functionの書き換え -->
+	    
     </script>
     
     <title>勤務実績入力画面</title>

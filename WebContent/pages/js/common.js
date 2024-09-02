@@ -22,12 +22,3 @@ function doSubmit(action) {
     document.forms[0].action = "/kikin-for-Struts-bug/menu.do";
     document.forms[0].submit();
 }
-
- /**
-  * 検索
-  */
-function submitSearch(action) {
-	document.forms[0].action = "/kikin-for-Struts-bug/workRecordInputSearch.do";
-    document.forms[0].submit();
-}
-//2024/09/02/宮平/検索サブミットの追加
