@@ -104,11 +104,11 @@
                         namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'red';
                     }
                 }
-                if (!breakTimeErrMsg) {
-                    if (!checkHalfWidthKana(breakTime)) {
+                if (!breakTimeErrMsg) {<!-- 2024/09/02/尾崎/エラー処理の修正 -->
+                    if (!checkTime(breakTime)) {
                         var strArr = ['休憩時間'];
-                        breakTimeErrMsg = getMessage('E-MSG-000006', strArr);
-                        namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'blue';
+                        breakTimeErrMsg = getMessage('E-MSG-000004', strArr);
+                        namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'red';
                     }
                 }
 
@@ -198,21 +198,24 @@
                     <table class="full-width">
                       <tr>
                         <td align="center" class="non-border">
-                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
+                        <!-- 2024/09/02/尾崎/startに変更 -->
+                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
                         </td>
                         <td align="center" class="non-border">
                             &#xFF5E;
                         </td>
                         <td align="center" class="non-border">
-                          <html:text property="startTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
+                        <!-- 2024/09/02/尾崎/endに変更 -->
+                          <html:text property="endTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
                         </td>
                       </tr>
                     </table>
                   </td>
+                  <td width="100px"  align="center"><!-- 2024/09/02/尾崎/214行目を追加 -->
                     <html:text property="breakTime" name="shiftMstMntBeanList"  size="5" maxlength="5" indexed="true"/>
-                 
+                 </td>
                   <td width="70px"  align="center">
-                    <html:hidden property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:hidden>
+                    <html:checkbox property="deleteShiftId" name="shiftMstMntBeanList"  value="<%= shiftId %>"  onchange='<%="checkDeleteFlg(" + idx + ")" %>'></html:checkbox>
                     <html:hidden property="deleteFlg" name="shiftMstMntBeanList" value="false" indexed="true"/>
                   </td>
                 </tr>
