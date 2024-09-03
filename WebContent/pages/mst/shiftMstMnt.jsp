@@ -113,7 +113,7 @@
 
                 // from - to のチェック
                 if (!checkTimeCompare(startTime, endTime)) {
-                  if (checkTime(startTime) > checkTime(endTime)) { //2024/09/03/宮平/(checkTime(startTime) && checkTime(endTime))から、(checkTime(startTime) > checkTime(endTime))に書き換えた。
+                  if (checkTime(startTime) && checkTime(endTime)) { //2024/09/03/宮平/(checkTime(startTime) && checkTime(endTime))から、(checkTime(startTime) > checkTime(endTime))に書き換えた。
                       fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
                       namedItem('shiftMstMntBeanList['+ i +'].startTime').style.backgroundColor = 'red';
                       namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'red';
