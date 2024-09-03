@@ -49,7 +49,8 @@ public class EmployeeMstMntLogic {
 
                 if (deleteFlg) {
                     // 削除
-                    employeeMstMntDao.updateEmployeeMst(employeeMstMntDto, loginUserDto);
+                	//2024.09.03 井上 updateEmployeeMst(employeeMstMntDto, loginUserDto)をdeleteEmployeeMst(employeeMstMntDto.getEmployeeId())に変更
+                    employeeMstMntDao.deleteEmployeeMst(employeeMstMntDto.getEmployeeId());
                 } else {
                     // 更新
                     employeeMstMntDao.updateEmployeeMst(employeeMstMntDto, loginUserDto);
