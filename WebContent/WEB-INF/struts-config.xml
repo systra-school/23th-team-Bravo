@@ -336,7 +336,7 @@
         input="/pages/bse/baseShiftMstMnt.jsp"
         scope="session"
         validate="false">
-        <forward name="success" path="/pages/bse/baseShiftMstMnt.jsp" />
+        <forward name="success" path="/pages/bse/baseShiftMstMntCheck.jsp" /><!-- 2024/09/03/尾崎/baseShiftMstMntCheckに変更 -->
         <forward name="failure" path="/pages/bse/baseShiftMstMnt.jsp" />
       </action>
       
@@ -389,7 +389,7 @@
         type="action.mth.MonthlyShiftInputRegisterAction"
         name="monthlyShiftInputForm"
         scope="session">
-        <forward name="success" path="/pages/mth/monthlyShiftInput.jsp"/>
+        <forward name="success" path="/pages/mth/monthlyShiftCheck.jsp"/>
       </action>
       <!-- 月別シフト確認初期表示 -->
       <!-- typeのActionがなかった -->
