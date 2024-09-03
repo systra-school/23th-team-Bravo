@@ -80,7 +80,8 @@ public class EmployeeMstMntUpdateAction extends Action{
 
         // 権限セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
-        Map<String, String> comboMap = comboListUtils.getCombo(CategoryId.AUTHORITY.getCategoryId(), Mcategory.DISPLAY.getName(), false);
+        //2024.09.03 井上 falseをtrueに変更
+        Map<String, String> comboMap = comboListUtils.getCombo(CategoryId.AUTHORITY.getCategoryId(), Mcategory.DISPLAY.getName(), true);
 
         // 取得したセレクトボックスのマップをフォームへセットする。
         employeeMstMntForm.setAuthorityCmbMap(comboMap);
