@@ -30,9 +30,10 @@
     /**
      * 登録へ
      */
-    function register() {
+    function register() {<!-- 2024/09/03/尾崎/登録ボタンの修正 -->
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/baseShiftRegiste.do');
+    	document.forms[0].submit();
+    	
     }
     </script>
 
@@ -198,7 +199,7 @@
               　
             </td>
             <td id="footRight">
-              <input value="登録"  type="button" class="smallButton"  onclick="registe()" />
+              <input value="登録"  type="button" class="smallButton"  onclick="register()" /><!-- 2024/09/03/尾崎/registerのスペルミス -->
             </td>
           </tr>
         </table>
