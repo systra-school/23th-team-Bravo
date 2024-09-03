@@ -22,7 +22,7 @@
 
 <bean:size id="dateBeanListSize" name="monthlyShiftInputForm" property="dateBeanList"/>
 <bean:size id="listSize" name="monthlyShiftInputForm" property="monthlyShiftInputBeanList"/>
-<bean:define id="showLength" value="6" type="java.lang.String"/>
+<bean:define id="showLength" value="16" type="java.lang.String"/><!-- valueを16に変更 -->
 <bean:define id="offset" name="monthlyShiftInputForm" property="offset" />
 <bean:define id="color" value="" type="java.lang.String"/>
 <bean:define id="countPage" name="monthlyShiftInputForm" property="countPage" type="java.lang.Integer"/>
@@ -55,16 +55,18 @@ if (listSize > intShowLength) {
     /**
      * 基本シフト反映
      */
-    function submitImportKihon() {
+    function submitImportKihon(action) {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftInputImportKihon.do');
+       document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftInputImportKihon.do";
+       document.forms[0].submit();
     }
     /**
      * 出勤希望反映
      */
-    function submitWorkDateRequest() {
+    function submitWorkDateRequest(action) {
         // サブミット
-        doSubmit('/kikin-for-Struts-bug/monthlyShiftInputWorkDateRequest.do');
+        document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftInputWorkDateRequest.do";
+        document.forms[0].submit();
     }
 
     /**
