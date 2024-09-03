@@ -48,7 +48,7 @@ public class ShiftMstMntLogic {
 
                 if (deleteFlg) {
                     // 削除
-                    shiftMstMntDao.deleteShiftMst(shiftMstMntDto.getShiftName());
+                    shiftMstMntDao.deleteShiftMst(shiftMstMntDto.getShiftId());//2024/09/02/宮平/getShiftName()をgetShiftId()に変更。
                 } else {
                     // 更新
                     shiftMstMntDao.updateShiftMst(shiftMstMntDto, loginUserDto);

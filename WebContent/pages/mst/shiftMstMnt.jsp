@@ -88,7 +88,6 @@
                 namedItem('shiftMstMntBeanList['+ i +'].startTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].endTime').style.backgroundColor = 'white';
                 namedItem('shiftMstMntBeanList['+ i +'].breakTime').style.backgroundColor = 'white';
-
                 // 時間チェック
                 if (!startTimeErrMsg) {
                     if (!checkTime(startTime)) {
