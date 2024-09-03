@@ -54,7 +54,8 @@ public class EmployeeMstMntUpdateAction extends Action{
      * @return アクションフォワード
      * @author naraki
      */
-    public ActionForward exequte(ActionMapping mapping, ActionForm form,
+    //2024.09.03 井上 exequteからexecuteに変更
+    public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest req, HttpServletResponse res) throws Exception {
 
         log.info(new Throwable().getStackTrace()[0].getMethodName());
