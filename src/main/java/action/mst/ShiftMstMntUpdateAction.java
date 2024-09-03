@@ -87,7 +87,7 @@ public class ShiftMstMntUpdateAction extends Action{
             shiftMstMntForm.setShiftMstMntBeanList(dtoToForm(shiftMstMntDtoList));
         }
 
-        return mapping.findForward(forward);//return nullから、return mapping.findForward(forward)に書き換えた。
+        return mapping.findForward(forward);//2024/09/02/宮平/return nullから、return mapping.findForward(forward)に書き換えた。
     }
 
     /**
@@ -137,9 +137,8 @@ public class ShiftMstMntUpdateAction extends Action{
             shiftMstMntBean.setStartTime(dto.getStartTime());
             shiftMstMntBean.setEndTime(dto.getEndTime());
             shiftMstMntBean.setBreakTime(dto.getBreakTime());
+            shiftMstMntBean.setDeleteFlg(shiftMstMntBean.getDeleteFlg());//2024/09/02/宮平/shiftMstMntBean.setDeleteFlg(shiftMstMntBean.getDeleteFlg());の追加。
             
-            shiftMstMntBean.setDeleteFlg(shiftMstMntBean.getDeleteFlg());//追加した部分。
-
             shiftMstMntBeanList.add(shiftMstMntBean);
 
         }
