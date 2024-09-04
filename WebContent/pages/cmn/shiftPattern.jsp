@@ -76,7 +76,7 @@
                       <bean:write property="shiftName" name="shiftPatternBeanList"/>
                     </td>
                     <td width="150px" align="center">
-                      <bean:write property="shiftName" name="shiftPatternBeanList"/>
+                      <bean:write property="symbol" name="shiftPatternBeanList"/><!-- 2024/09/03/尾崎/symbolに変更 -->
                     </td>
                     <td width="150px" align="center">
                       <bean:write property="timeZone" name="shiftPatternBeanList" filter="false"/>
