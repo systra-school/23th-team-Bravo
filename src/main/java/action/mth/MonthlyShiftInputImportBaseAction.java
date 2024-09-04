@@ -171,6 +171,6 @@ public class MonthlyShiftInputImportBaseAction extends MonthlyShiftInputAbstract
         monthlyShiftForm.setYearMonth(yearMonth);
         // ページング用
         monthlyShiftForm.setMaxPage(CommonUtils.getMaxPage(baseShiftDtoMap.size(), SHOW_LENGTH));
-        return null;
+        return mapping.findForward(forward);//2024/09/04/尾崎/nullを変更
     }
 }
