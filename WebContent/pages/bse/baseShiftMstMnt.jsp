@@ -138,7 +138,7 @@
                  <!-- 余分なtableを消去 -->
               </table>
             </div>
-            <div style="height:450px;overflow:auto">
+            <div style="height:450px; overflow:auto">
               <table class="tableBody">
                 <logic:iterate id="baseShiftMstMntBeanList" name="baseShiftMstMntForm" property="baseShiftMstMntBeanList" indexId="idx">
                   <tr>

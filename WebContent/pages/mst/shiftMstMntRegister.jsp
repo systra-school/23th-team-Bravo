@@ -152,13 +152,13 @@
                   <table class="full-width" >
                     <tr>
                       <td align="center" class="non-border">
-                        <html:text property="endTime" size="5" maxlength="10" value=""/>
+                        <html:text property="startTime" size="5" maxlength="10" value=""/> <%-- //2024/09/04/宮平/property="endTime"をproperty="startTime"に書き換え。 --%>
                       </td>
                       <td align="center" class="non-border">
                           &#xFF5E;
                       </td>
                       <td align="center" class="non-border">
-                        <html:text property="startTime" size="5" maxlength="10" value=""/>
+                        <html:text property="endTime" size="5" maxlength="10" value=""/> <%-- //2024/09/04/宮平/property="startTime"をproperty="endTime"に書き換え。 --%>
                       </td>
                     </tr>
                   </table>
