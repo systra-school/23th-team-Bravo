@@ -69,7 +69,9 @@ public class WorkDateRequestInputInitAction extends WorkDateRequestAbstractActio
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
         Map<String, String> shiftCmbMap = comboListUtils.getComboShift(true);
         
-        Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.YEARMONTH_NOSL), 0, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
+        //2024.09.05 井上 0を2に変更。
+        Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.YEARMONTH_NOSL), 2, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
+        
         // シフトIDを取得する
         List<List<WorkDateRequestCheckDto>> workRequestCheckDtoNestedList = workDateRequestLogic.getWorkDateRequestCheckDtoList(yearMonth);
         List<WorkDateRequestInputBean> workDateRequestInputBeanList = new ArrayList<WorkDateRequestInputBean>();
