@@ -258,10 +258,10 @@
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="breakTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="workRecordInputList" property="overTime" /><br>
+                    <bean:write name="workRecordInputList" property="actualWorkTime" /><br><!-- 2024/09/05/尾崎/actualWorkTimeに変更 -->
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="workRecordInputList" property="actualWorkTime" /><br>
+                    <bean:write name="workRecordInputList" property="overTime" /><br>
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="workRecordInputList" property="holidayTime" /><br>
