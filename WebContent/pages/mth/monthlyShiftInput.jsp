@@ -67,6 +67,7 @@ if (listSize > intShowLength) {
         // サブミット
         document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftInputWorkDateRequest.do";
         document.forms[0].submit();
+        
     }
 
     /**
@@ -92,7 +93,7 @@ if (listSize > intShowLength) {
      * サブウィンドウを開く
      */
     function openWindow(){
-        window.open("/kikin-for-Struts-bug/menu.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
+        window.open("/kikin-for-Struts-bug/shiftPattern.do?param=", "windowBPopup", "menubar=no, toolbar=no, scrollbars=auto, resizable=yes, width=520px, height=650px");
     }
     </script>
     <title>月別シフト入力画面</title>
