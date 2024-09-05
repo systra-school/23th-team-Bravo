@@ -54,13 +54,13 @@ public class WorkRecordDao extends Dao {
 			strSql.append("    shift.employee_id         AS employee_id, ");
 			strSql.append("    shift.shift_id         AS shift_id, ");
 			strSql.append("    shift.shift_name           AS symbol, ");
-			strSql.append("    shift.start_time_shift AS start_time_shift, ");
+			strSql.append("    shift.start_time_shift AS start_time_shift, ");//2024/09/05/尾崎/startとendの変更
 			strSql.append("    shift.end_time_shift   AS end_time_shift,  ");
 			strSql.append("    shift.break_time_shift AS break_time_shift, ");
 			strSql.append("    (CASE WHEN shift.work_day IS NULL THEN twr.work_day  ");
-			strSql.append("    ELSE shift.work_day END) AS work_day, ");
-			strSql.append("    twr.end_time         AS start_time, ");
-			strSql.append("    twr.start_time           AS end_time, ");
+			strSql.append("    ELSE shift.work_day END) AS work_day, ");			
+			strSql.append("    twr.start_time           AS start_time, ");//2024/09/05/尾崎/startとendの変更
+			strSql.append("    twr.end_time         AS end_time, ");
 			strSql.append("    twr.break_time         AS break_time, ");
 			strSql.append("    twr.actual_work_time      AS actual_work_time, ");
 			strSql.append("    twr.over_time      AS over_time, ");
