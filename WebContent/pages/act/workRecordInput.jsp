@@ -160,7 +160,7 @@
         </table>
       </div>
       <div id="businessBody">
-        <html:form action="/employeeMstMntRegister" >
+        <html:form action="/workRecordInputRegister" ><!-- 2024/09/04/尾崎/actionを変更 -->
           <div style="width: 100%;">
             <div style="float: left; width: 804px; text-align: left; margin-left:100px;">
               表示年月：
@@ -248,11 +248,11 @@
                     <bean:write name="workRecordInputList" property="symbol" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <!-- 2024/08/23/尾崎/bean:writeをhtml:textに修正 -->
-                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
+                    <!-- 2024/08/23/尾崎/bean:writeをhtml:textに修正,startTimeに変更 -->
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
-                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="startTime" indexed="true"></html:text><br>
+                    <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="endTime" indexed="true"></html:text><br>
                   </td>
                   <td width="100px" align="center">
                     <html:text style="text-align:center" size="5" maxlength="5" name="workRecordInputList" property="breakTime" indexed="true"></html:text><br>
