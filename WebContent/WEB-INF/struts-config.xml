@@ -336,7 +336,7 @@
         input="/pages/bse/baseShiftMstMnt.jsp"
         scope="session"
         validate="false">
-        <forward name="success" path="/pages/bse/baseShiftMstMntCheck.jsp" /><!-- 2024/09/03/尾崎/baseShiftMstMntCheckに変更 -->
+        <forward name="success" path="/pages/bse/baseShiftMstMnt.jsp" /><!-- 2024/09/03/尾崎/baseShiftMstMntCheckに変更 -->
         <forward name="failure" path="/pages/bse/baseShiftMstMnt.jsp" />
       </action>
       
