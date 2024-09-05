@@ -279,8 +279,8 @@ public class WorkRecordDao extends Dao {
 				workRecordDto.setStartTimeShift(startShift);                                              // 開始時間(シフト)
 				workRecordDto.setEndTimeShift(endShift);                                                  // 終了時間(シフト)
 				workRecordDto.setBreakTimeShift(breakShift);                                              // 休憩時間(シフト)
-				workRecordDto.setStartTime(endTime);                                                    // 開始時間
-				workRecordDto.setEndTime(startTime);                                                        // 終了時間
+				workRecordDto.setStartTime(startTime);                                                    // 開始時間
+				workRecordDto.setEndTime(endTime);                                                        // 終了時間
 				workRecordDto.setBreakTime(breakTime);                                                    // 休憩時間
 				workRecordDto.setActualWorkTime(rs.getString(T_work_record.ACTUAL_WORK_TIME.getName())); // 実働時間
 				workRecordDto.setOverTime(rs.getString(T_work_record.OVER_TIME.getName()));       // 時間外時間
