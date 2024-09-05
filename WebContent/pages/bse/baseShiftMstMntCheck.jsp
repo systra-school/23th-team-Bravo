@@ -136,6 +136,7 @@
               </table>
             </div>
             <div style="height:450px; overflow:auto">
+            <div style="pointer-events:none">
               <table class="tableBody">
                 <logic:iterate id="baseShiftMstMntBeanList" name="baseShiftMstMntForm" property="baseShiftMstMntBeanList" indexId="idx">
                   <tr>
@@ -144,43 +145,44 @@
                       <bean:write property="employeeName" name="baseShiftMstMntBeanList"/>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnMonday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnMonday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnTuesday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnTuesday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnWednesday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnWednesday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnThursday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnThursday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnFriday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnFriday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnSaturday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnSaturday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                     <td width="50px" align="center">
-                      <html:select property="shiftIdOnSunday" name="baseShiftMstMntBeanList" indexed="true" >
+                      <html:select property="shiftIdOnSunday" name="baseShiftMstMntBeanList" indexed="true" disabled="true">
                       <html:optionsCollection name="baseShiftMstMntForm" property="shiftCmbMap" value="key" label="value"/>
                       </html:select>
                     </td>
                   </tr>
                 </logic:iterate>
               </table>
+            </div>
             </div>
           </div>
         </html:form>
