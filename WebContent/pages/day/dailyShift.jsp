@@ -55,7 +55,7 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/workDateRequestCheckShow.do');
+        doSubmit('/kikin-for-Struts-bug/dailyShiftPage.do');
     }
 
     /**
