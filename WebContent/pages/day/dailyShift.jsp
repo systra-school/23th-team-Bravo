@@ -55,7 +55,7 @@
      * 検索
      */
     function submitSearch() {
-        doSubmit('/kikin-for-Struts-bug/dailyShiftPage.do');
+        doSubmit('/kikin-for-Struts-bug/workDateRequestCheckShow.do');
     }
 
     /**
@@ -95,7 +95,7 @@
       <br>
       <div id="businessBody" style="overflow: hidden;">
         <div style="margin-left:22%;">
-          <html:form action="/dailyShiftPage"><!-- 2024/09/05/尾崎/actionを追加 -->
+          <html:form><!-- 2024/09/05/尾崎/actionを追加 -->
             <div style="height: 20px; margin-left:405px;">
               表示年月：
               <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=previous">前日</html:link><!-- 2024/09/05/尾崎/previousに変更 -->
