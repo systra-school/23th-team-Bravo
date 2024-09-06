@@ -128,12 +128,12 @@ public class WorkDateRequestDao extends Dao{
             strSql.append("FROM ");
             strSql.append("t_shift ts LEFT OUTER JOIN ");
             strSql.append("m_shift ms ON ");
-            strSql.append("ts.request_shift_id = ");
+            strSql.append("ts.shift_id = ");
             strSql.append("ms.shift_id ");
             strSql.append("WHERE ");
             strSql.append("SUBSTRING(year_month_day, 1, 6) = ?) ts  ON ");
             strSql.append("emp.employee_id = ts.employee_id ");
-            //strSql.append("WHERE emp.employee_id = 'sh0001' ");
+//            strSql.append("WHERE emp.employee_id = 'sh0001' ");
             strSql.append("ORDER BY ");
             strSql.append("employee_id,");
             strSql.append("year_month_day");
@@ -141,6 +141,8 @@ public class WorkDateRequestDao extends Dao{
 
             /*
              202240905　井上・副島　上記二つのSQL文をコメントアウト
+             
+             2024.09.06 井上・副島　m_shift ms ON "ts.request_shift_id = " ms.shift_idを"ts.shift_id = "に変更。
              */
             
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
@@ -183,6 +185,7 @@ public class WorkDateRequestDao extends Dao{
                 dto.setYearMonthDay(rs.getString(T_Shift.YEAR_MONTH_DAY.getName()));
                 dto.setMyRequestShiftId(rs.getString(T_Shift.REQUEST_SHIFT_ID.getName()));
                 dto.setMyRequestSymbol(CommonUtils.changeNullToHyphen(rs.getString(M_shift.SYMBOL.getName())));
+                System.err.println(rs.getString(M_shift.SYMBOL.getName()));
                 // 取得した値を戻り値のリストにセットする。
                 shiftRequestCheckDtoList.add(dto);
             }
