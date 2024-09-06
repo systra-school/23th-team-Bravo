@@ -97,7 +97,7 @@
       	<div id="businessBody" style="overflow: hidden;">
       	<%-- 20240828 副島 margin-leftをmargin-rightに変更--%>
         <div style="margin-right:20%;">
-          <html:form action="/workDateRequestInputInit" >
+          <html:form action="/workDateRequestInputRegister" ><!-- 2024/09/06/尾崎/登録処理の修正 -->
             表示年月：
             <html:select name="workDateRequestInputForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workDateRequestInputSearch.do')">
             <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workDateRequestInputSearch.do')に書き換え -->
