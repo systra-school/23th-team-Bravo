@@ -28,56 +28,56 @@
      */
     function checkDeleteFlg(index) {
       var isCheck = document.forms[0].elements.deleteEmployeeId[index].checked;
-
       document.forms[0].elements.deleteFlg[index].value = isCheck;
     }
-
     /**
      * 新規登録画面へ
      */
-    function employeeMstMntRegister() {
-
-        with (document.forms[0]) {
-            // パスワード
-            var passwordVar = password.value;
-            // 社員名カナ
-            var employeeNameKanaVar = employeeNameKana.value;
-            // エラーメッセージ
-            var errorMsg = '';
-
-            // 背景色をクリアする
-            password.style.backgroundColor = 'white';
-            employeeNameKana.style.backgroundColor = 'white';
-
-            // パスワード
-            if (!checkRequired(passwordVar)) {
-                // エラー有り
-                var strArr = ['パスワード'];
+     function employeeMstMntRegister() {
+         with (document.forms[0]) {
+             // パスワード
+             var passwordVar = password.value;
+             //社員名
+             var employeeNameVar = employeeName.value;
+             // 社員名カナ
+             var employeeNameKanaVar = employeeNameKana.value;
+             // エラーメッセージ
+             var errorMsg = '';
+             // 背景色をクリアする
+             password.style.backgroundColor = 'white';
+             employeeNameKana.style.backgroundColor = 'white';
+             if (!checkRequired(passwordVar)) {
+                 var strArr = ['パスワード'];
+                 errorMsg += getMessage('E-MSG-000001', strArr);
+                 password.style.backgroundColor = 'red';
+             }
+             if (!checkRequired(employeeNameVar)) {
+                var strArr = [ '社員名' ];
                 errorMsg += getMessage('E-MSG-000001', strArr);
-                password.style.backgroundColor = 'red';
-            }
-            // 社員名カナ
-            if (!checkHalfWidthKana(employeeNameKanaVar)) {//エラーコードの修正
-                // エラー有り
-                var strArr = ['社員名カナ'];
-                errorMsg += getMessage('E-MSG-000003', strArr);//エラーメッセージの変更
-                employeeNameKana.style.backgroundColor = 'red';
-            }
-
-            if (errorMsg) {
-                alert(errorMsg);
-                // エラー
-                return false;
-            }
-        }
-
-        // サブミット
-//2024.08.28井上 doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do');からdocument.forms[0].submit();に変更
-        document.forms[0].submit();
-    }
+                employeeName.style.backgroundColor = 'red';
+             }
+             if (!checkRequired(employeeNameKanaVar)) {
+            	 var strArr = ['社員名カナ'];
+                 errorMsg += getMessage('E-MSG-000001', strArr); //エラーメッセージの変更
+                 employeeNameKana.style.backgroundColor = 'red';
+                 }
+             if(!checkHalfWidthKana(employeeNameKanaVar)){
+            	 var strArr = ['社員名カナ'];
+                 errorMsg += getMessage('E-MSG-000003', strArr); //エラーメッセージの変更
+                 employeeNameKana.style.backgroundColor = 'red';
+                 }
+             if (errorMsg) {
+                 alert(errorMsg);
+                 // エラー
+                 return false;
+             }
+         }
+         // サブミット
+ //2024.08.28井上 doSubmit('/kikin-for-Struts-bug/employeeMstMntRegister.do');からdocument.forms[0].submit();に変更
+         document.forms[0].submit();
+     }
     </script>
     <title>社員マスタメンテナンス画面</title>
-
     <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
