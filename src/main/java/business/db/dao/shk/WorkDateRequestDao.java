@@ -128,7 +128,7 @@ public class WorkDateRequestDao extends Dao{
             strSql.append("FROM ");
             strSql.append("t_shift ts LEFT OUTER JOIN ");
             strSql.append("m_shift ms ON ");
-            strSql.append("ts.shift_id = ");
+            strSql.append("ts.request_shift_id = ");
             strSql.append("ms.shift_id ");
             strSql.append("WHERE ");
             strSql.append("SUBSTRING(year_month_day, 1, 6) = ?) ts  ON ");
@@ -143,6 +143,7 @@ public class WorkDateRequestDao extends Dao{
              202240905　井上・副島　上記二つのSQL文をコメントアウト
              
              2024.09.06 井上・副島　m_shift ms ON "ts.request_shift_id = " ms.shift_idを"ts.shift_id = "に変更。
+             再修正　元に戻す
              */
             
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
