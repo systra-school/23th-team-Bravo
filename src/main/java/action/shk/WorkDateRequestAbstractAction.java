@@ -19,5 +19,5 @@ public abstract class WorkDateRequestAbstractAction extends Action {
     // ログ出力クラス
     protected Log log = LogFactory.getLog(this.getClass());
     // 表示データ数
-    protected final int SHOW_LENGTH = 18;
+    protected final int SHOW_LENGTH = 19;//2024/09/07/尾崎/19に変更
 }
