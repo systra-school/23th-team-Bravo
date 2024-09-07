@@ -50,7 +50,7 @@
         <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                      property="authorityId"
                      value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-          <div  style="margin-left:15%;">
+          <div  style="margin-left:7.5%;"><!-- 2024/09/07/尾崎/7.5%に変更 -->
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
               <input type="submit" value="月別シフト確認" class="bigButton" />
@@ -59,9 +59,7 @@
               <input type="submit" value="日別シフト確認" class="bigButton" />
             </html:form>
             
-            <html:form action="/baseShiftInit">
-              <input type="submit" value="基本シフト登録" class="bigButton" />
-            </html:form>
+            
             
           </div>
 
@@ -91,7 +89,9 @@
             <html:form action="/shiftMstMnt">
               <input type="submit" value="シフトマスタメンテナンス" class="bigButton" />
             </html:form>
-            
+            <html:form action="/baseShiftInit"><!-- 2024/09/07/尾崎/場所を移動 -->
+              <input type="submit" value="基本シフト登録" class="bigButton" />
+            </html:form>
            <!-- 出勤希望日入力を消去 -->
             
             
@@ -103,7 +103,7 @@
                      property="authorityId"
                      value="<%=CommonConstant.Authority.USER.getId() %>">
           
-          <div  style="margin-left:15%;">
+          <div  style="margin-left:7.5%;">
           <div class="menuBlock">
             <html:form action="/monthlyShiftCheckInit">
               <input type="submit" value="月別シフト確認" class="bigButton" />
