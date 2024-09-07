@@ -114,7 +114,8 @@
                   </div>
                 </td>
                 <td  valign="top">
-                  <div id="headRightTbl" style="overflow-y: hidden;overflow-x: hidden;width: <%=bodyRightDivWidth%>px; ">
+                  <div id="headRightTbl" style="overflow-y: hidden;overflow-x: hidden;width: 900px; ">
+                  <%--　20240907 副島　width: <%=bodyRightDivWidth%>px;をwidth: 900px;に変更--%>
                     <table class="tableHeader">
                       <tr>
                         <logic:iterate id="dailyShiftBean" name="dailyShiftForm" property="dailyShiftBeanList">
