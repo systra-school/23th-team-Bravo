@@ -66,7 +66,7 @@ public class BaseShiftDao extends Dao {
             strSql.append(" LEFT JOIN m_base_shift mbs");
             strSql.append(" ON        emp.employee_id = mbs.employee_id ");
             strSql.append(" ORDER BY       ");
-            strSql.append("   mbs.employee_id     ");
+            strSql.append("   emp.employee_id     ");//2024/09/07/尾崎/emp.employee_idに変更
             //2024/09/03/尾崎/この行を消去
             PreparedStatement ps = connection.prepareStatement(strSql.toString());
 
