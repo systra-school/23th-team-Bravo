@@ -18,16 +18,20 @@
 <%@ page import="constant.RequestSessionNameConstant"%>
 <%@ page import="constant.CommonConstant"%>
 
-<bean:size id="employeeMstMntBeanListSize" name="employeeMstMntForm" property="employeeMstMntBeanList"/>
+<bean:size id="employeeMstMntBeanListSize" name="employeeMstMntForm"
+	property="employeeMstMntBeanList" />
 <html lang="ja">
-  <head>
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/message.js"></script>
-    <script type="text/javascript">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/common.js"></script>
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/checkCommon.js"></script>
+<script type="text/javascript"
+	src="/kikin-for-Struts-bug/pages/js/message.js"></script>
+<script type="text/javascript">
     /**
      * チェックボックスがチェックされたら true、されていなければ false
      * param index 対象行番号
@@ -58,7 +62,7 @@
      */
     function employeeMstMntUpdate() {
         // 一覧のサイズ
-        var listSize = <%= employeeMstMntBeanListSize %>;
+        var listSize = <%=employeeMstMntBeanListSize%>;
 
         // パスワードエラーメッセージ
         var passwordErrorMsg = '';
@@ -72,17 +76,35 @@
                 var password = namedItem('employeeMstMntBeanList['+ i +'].password').value;
                 // 社員名カナを取得する。
                 var employeeNameKana = namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').value;
-
+                //社員名を取得する
+				var employeeName = namedItem('employeeMstMntBeanList['+ i +'].employeeName').value;
                 // 背景色をクリアする
                 namedItem('employeeMstMntBeanList['+ i +'].password').style.backgroundColor = 'white';
                 namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'white';
-
+                namedItem('employeeMstMntBeanList['+ i +'].employeeName').style.backgroundColor = 'white';
                 // パスワードチェック
                 if (!passwordErrorMsg) {
                     if (!checkRequired(password)) {
                         var strArr = ['パスワード'];
                         passwordErrorMsg = getMessage('E-MSG-000001', strArr);
                         namedItem('employeeMstMntBeanList['+ i +'].password').style.backgroundColor = 'red';
+                    }
+                }
+                //社員名入力されてるかチェック
+                if (!passwordErrorMsg) {
+                    if (!checkRequired(employeeName)) {
+                        var strArr = ['社員名'];
+                        passwordErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('employeeMstMntBeanList['+ i +'].employeeName').style.backgroundColor = 'red';
+                    }
+                }
+                
+                //社員名カナが入力されているか確認
+                if (!passwordErrorMsg) {
+                    if (!checkRequired(employeeNameKana)) {
+                        var strArr = ['社員名カナ'];
+                        passwordErrorMsg = getMessage('E-MSG-000001', strArr);
+                        namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'red';
                     }
                 }
                 // 社員名カナチェック
@@ -113,109 +135,96 @@
     }
     </script>
 
-    <title>社員マスタメンテナンス画面</title>
+<title>社員マスタメンテナンス画面</title>
 
-    <link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <div id="wrapper">
-      <div id="header">
-        <table class="full-width">
-          <tr>
-            <td id="headLeft">
-              <input value="戻る" type="button" class="smallButton"  onclick="doSubmit('/kikin-for-strus-bug/menu.do')" />
-            </td>
-            <td id="headCenter">
-              社員マスタメンテナンス
-            </td>
-            <td id="headRight">
-              <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div id="businessBody">
-        <html:form action="/employeeMstMntUpdate">
-          <div style="overflow:hidden;  margin: 0 auto; width:1030px;">
-            <table class="tableHeader">
-              <tr>
-                <td width="200px" align="center">
-                  社員ＩＤ
-                </td>
-                <td width="200px" align="center">
-                  パスワード
-                </td>
-                <td width="200px" align="center">
-                  社員名
-                </td>
-                <td width="200px" align="center">
-                  社員名カナ
-                </td>
-                <!-- 20240828 副島 社員名カナから権限項目をわける。 -->                
-                <td width="100px" align="center">
-                  権限
-                </td>
-                
-                <td width="100px" align="center">
-                  削除
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div style="overflow: auto; height:440px; width:1030px;  margin: 0 auto; ">
-            <table class="tableBody" >
-              <logic:iterate indexId="idx" id="employeeMstMntBeanList" name="employeeMstMntForm"  property="employeeMstMntBeanList">
-                <bean:define id="employeeId" name= "employeeMstMntBeanList" property="employeeId" type="java.lang.String"/>
-                <bean:define id="selectAuthorityId" name= "employeeMstMntBeanList" property="authorityId" type="java.lang.String"/>
-               <tr> 
-                  <td width="200px"  align="center">
-                    <bean:write property="employeeId" name="employeeMstMntBeanList"/>
-                    <html:hidden property="employeeId" name="employeeMstMntBeanList" indexed="true"/>
-                  </td>
-                  <td width="200px"  align="center">
-                    <html:text property="password" name="employeeMstMntBeanList"  size="10" maxlength="6" indexed="true" />
-                  </td>
-                  <td width="200px"  align="center">
-                    <html:text property="employeeName" name="employeeMstMntBeanList" size="20" maxlength="10" indexed="true" />
-                  </td>
-                  <td width="200px"  align="center">
-                    <html:text property="employeeNameKana" name="employeeMstMntBeanList"  size="20" maxlength="10" indexed="true" />
-                  </td>
-                  <td width="100px"  align="center">
-                  <!-- 20240828 副島 disabled="true"を削除 -->
-                    <html:select property="authorityId" name="employeeMstMntBeanList" value="<%= selectAuthorityId %>" indexed="true">
-                      <html:optionsCollection name="employeeMstMntForm"
-                                              property="authorityCmbMap"
-                                              value="key"
-                                              label="value"/>
-                    </html:select>
-                  </td>
-                  <td width="100px"  align="center">
-                    <html:checkbox property="deleteEmployeeId" name="employeeMstMntBeanList" value="<%= employeeId %>" onchange='<%="checkDeleteFlg(" + idx + ")" %>' ></html:checkbox>
-                    <html:hidden property="deleteFlg" name="employeeMstMntBeanList" value="false" indexed="true"/>
-                  </td>
-                </tr>
-              </logic:iterate>
-            </table>
-          </div>
-        </html:form>
-      </div>
-      <div id="footer">
-        <table>
-          <tr>
-            <td id="footLeft">
-              　
-            </td>
-            <td id="footCenter">
-              　
-            </td>
-            <td id="footRight">
-              <input value="新規登録" type="button" class="smallButton"  onclick="employeeMstMntRegisterInit()" />
-              <input value="更新" type="button" class="smallButton"  onclick="employeeMstMntUpdate()" />
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </body>
+<link href="/kikin-for-Struts-bug/pages/css/common.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<table class="full-width">
+				<tr>
+					<td id="headLeft"><input value="戻る" type="button"
+						class="smallButton"
+						onclick="doSubmit('/kikin-for-strus-bug/menu.do')" /></td>
+					<td id="headCenter">社員マスタメンテナンス</td>
+					<td id="headRight"><input value="ログアウト" type="button"
+						class="smallButton" onclick="logout()" /></td>
+				</tr>
+			</table>
+		</div>
+		<div id="businessBody">
+			<html:form action="/employeeMstMntUpdate">
+				<div style="overflow: hidden; margin: 0 auto; width: 1030px;">
+					<table class="tableHeader">
+						<tr>
+							<td width="200px" align="center">社員ＩＤ</td>
+							<td width="200px" align="center">パスワード</td>
+							<td width="200px" align="center">社員名</td>
+							<td width="200px" align="center">社員名カナ</td>
+							<!-- 20240828 副島 社員名カナから権限項目をわける。 -->
+							<td width="100px" align="center">権限</td>
+
+							<td width="100px" align="center">削除</td>
+						</tr>
+					</table>
+				</div>
+				<div
+					style="overflow: auto; height: 440px; width: 1030px; margin: 0 auto;">
+					<table class="tableBody">
+						<logic:iterate indexId="idx" id="employeeMstMntBeanList"
+							name="employeeMstMntForm" property="employeeMstMntBeanList">
+							<bean:define id="employeeId" name="employeeMstMntBeanList"
+								property="employeeId" type="java.lang.String" />
+							<bean:define id="selectAuthorityId" name="employeeMstMntBeanList"
+								property="authorityId" type="java.lang.String" />
+							<tr>
+								<td width="200px" align="center"><bean:write
+										property="employeeId" name="employeeMstMntBeanList" /> <html:hidden
+										property="employeeId" name="employeeMstMntBeanList"
+										indexed="true" /></td>
+								<td width="200px" align="center"><html:text
+										property="password" name="employeeMstMntBeanList" size="10"
+										maxlength="6" indexed="true" /></td>
+								<td width="200px" align="center"><html:text
+										property="employeeName" name="employeeMstMntBeanList"
+										size="20" maxlength="10" indexed="true" /></td>
+								<td width="200px" align="center"><html:text
+										property="employeeNameKana" name="employeeMstMntBeanList"
+										size="20" maxlength="10" indexed="true" /></td>
+								<td width="100px" align="center">
+									<!-- 20240828 副島 disabled="true"を削除 --> <html:select
+										property="authorityId" name="employeeMstMntBeanList"
+										value="<%=selectAuthorityId%>" indexed="true">
+										<html:optionsCollection name="employeeMstMntForm"
+											property="authorityCmbMap" value="key" label="value" />
+									</html:select>
+								</td>
+								<td width="100px" align="center"><html:checkbox
+										property="deleteEmployeeId" name="employeeMstMntBeanList"
+										value="<%=employeeId%>"
+										onchange='<%="checkDeleteFlg(" + idx + ")"%>'></html:checkbox>
+									<html:hidden property="deleteFlg" name="employeeMstMntBeanList"
+										value="false" indexed="true" /></td>
+							</tr>
+						</logic:iterate>
+					</table>
+				</div>
+			</html:form>
+		</div>
+		<div id="footer">
+			<table>
+				<tr>
+					<td id="footLeft"></td>
+					<td id="footCenter"></td>
+					<td id="footRight"><input value="新規登録" type="button"
+						class="smallButton" onclick="employeeMstMntRegisterInit()" /> <input
+						value="更新" type="button" class="smallButton"
+						onclick="employeeMstMntUpdate()" /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
 </html>
