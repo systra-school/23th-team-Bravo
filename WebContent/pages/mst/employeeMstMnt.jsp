@@ -66,9 +66,12 @@
 
         // パスワードエラーメッセージ
         var passwordErrorMsg = '';
+        // 社員名エラーメッセージ
+        var employeeNameErrorMsg = '';
         // 社員名カナエラーメッセージ
         var employeeNameKanaErrorMsg = '';
         var errorMsg = '';
+        
 
         with(document.forms[0].elements) {
             for (var i = 0; i < listSize; i++) {
@@ -91,19 +94,19 @@
                     }
                 }
                 //社員名入力されてるかチェック
-                if (!passwordErrorMsg) {
+                if (!employeeNameErrorMsg) {
                     if (!checkRequired(employeeName)) {
                         var strArr = ['社員名'];
-                        passwordErrorMsg = getMessage('E-MSG-000001', strArr);
+                        employeeNameErrorMsg = getMessage('E-MSG-000001', strArr);
                         namedItem('employeeMstMntBeanList['+ i +'].employeeName').style.backgroundColor = 'red';
                     }
                 }
                 
                 //社員名カナが入力されているか確認
-                if (!passwordErrorMsg) {
+                if (!employeeNameKanaErrorMsg) {
                     if (!checkRequired(employeeNameKana)) {
                         var strArr = ['社員名カナ'];
-                        passwordErrorMsg = getMessage('E-MSG-000001', strArr);
+                        employeeNameKanaErrorMsg = getMessage('E-MSG-000001', strArr);
                         namedItem('employeeMstMntBeanList['+ i +'].employeeNameKana').style.backgroundColor = 'red';
                     }
                 }
@@ -116,7 +119,7 @@
                     }
                 }
 
-                if (passwordErrorMsg && employeeNameKanaErrorMsg) {
+                if (passwordErrorMsg && employeeNameErrorMsg && employeeNameKanaErrorMsg ) {
                     // パスワード 、社員名カナが共にエラーの場合
                     break;
                 }
