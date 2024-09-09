@@ -186,10 +186,10 @@
 								<td width="200px" align="center"><bean:write
 										property="employeeId" name="employeeMstMntBeanList" /> <html:hidden
 										property="employeeId" name="employeeMstMntBeanList"
-										indexed="true" /></td>
+										indexed="true" /></td><!-- 2024/09/09/尾崎passwordに変更 -->
 								<td width="200px" align="center"><html:password
 										property="password" name="employeeMstMntBeanList" size="10"
-										maxlength="6" indexed="false" /></td><!-- 2024/09/09/尾崎falseに変更 -->
+										maxlength="6" indexed="true" /></td>
 								<td width="200px" align="center"><html:text
 										property="employeeName" name="employeeMstMntBeanList"
 										size="20" maxlength="10" indexed="true" /></td>
