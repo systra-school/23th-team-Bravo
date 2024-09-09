@@ -45,6 +45,6 @@ public class DateBean {
 		return publicHolidayFlg;
 	}
 	public void setPublicHolidayFlg(boolean publicHolidayFlg) {
-		this.publicHolidayFlg = false;
+		this.publicHolidayFlg = publicHolidayFlg;//2024/09/09/尾崎/publicHolidayFlgに修正
 	}
 }
