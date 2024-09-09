@@ -131,6 +131,7 @@ if (listSize > intShowLength) {
                                       label="value"/>
               </html:select>
               <html:link href="/kikin-for-Struts-bug/monthlyShiftInputPage.do?paging=back">前へ</html:link>
+              <!-- 2024.09.09 井上.paging=backをpaging=nextに変更。 -->>
               <html:link href="/kikin-for-Struts-bug/monthlyShiftInputPage.do?paging=back">次へ</html:link>
               <bean:write name="monthlyShiftInputForm" property="countPage"/>/
               <bean:write name="monthlyShiftInputForm" property="maxPage"/>
