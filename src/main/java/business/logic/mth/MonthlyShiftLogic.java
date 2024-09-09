@@ -209,7 +209,9 @@ public class MonthlyShiftLogic {
 
         List<DateBean> dateBeanList = monthlyShiftCheckForm.getDateBeanList();
         int listSize = dateBeanList.size();
-        for (int i = 0; i < 31; i++) {
+
+        //2024.09.09 井上 for内の i < 31を i < listSizeに変更。
+        for (int i = 0; i < listSize; i++) {
             DateBean dateBean = null;
 
             if (i < listSize) {
