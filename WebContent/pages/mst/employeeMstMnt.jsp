@@ -126,7 +126,7 @@
             }
         }
         // エラーメッセージ
-        errorMsg = passwordErrorMsg + employeeNameKanaErrorMsg;
+        errorMsg = passwordErrorMsg + employeeNameErrorMsg + employeeNameKanaErrorMsg;
 
         if (errorMsg) {
             alert(errorMsg);
