@@ -47,7 +47,7 @@
 				<div>ID・パスワードを入力してください。</div>
 				<html:form action="/login" onsubmit="return validateLoginForm(this)">
 
-					<html:text property="employeeId" size="16" value="sh0001" />
+					<html:text property="employeeId" size="16" value="" /><!-- 2024/09/09/尾崎/初期値を消去 -->
 					<br />
 					<html:password property="password" size="16" redisplay="false"
 					 />
