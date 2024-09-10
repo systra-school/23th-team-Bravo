@@ -178,9 +178,21 @@ public class MonthlyShiftLogic {
         // ③出力ファイルフォーマット(ConvertConfigurationの配列)
         // を指定し、ReportBookインスタンスを生成します。
         //
+    	
+    	
+    	//2024.09.10 井上 listSizeの位置とテンプレの変更
         String templateFileName;
-
-        templateFileName = "月別シフト確認テンプレート.xls";
+        List<DateBean> dateBeanList = monthlyShiftCheckForm.getDateBeanList();
+        int listSize = dateBeanList.size();
+        if (listSize == 28) {
+        	templateFileName = "月別シフト確認テンプレート_28day.xls";
+        } else if (listSize == 29) {
+        	templateFileName = "月別シフト確認テンプレート_うるう年.xls";
+        } else if (listSize == 30) {
+        	templateFileName = "月別シフト確認テンプレート_30day.xls";
+        } else {
+        	templateFileName = "月別シフト確認テンプレート.xls";
+        }
 
         URL templateFileUrl = MonthlyShiftCheckPrintAction.class.getResource(templateFileName);
         String templateFilePath = URLDecoder.decode(templateFileUrl.getPath(), "UTF-8");
@@ -207,9 +219,7 @@ public class MonthlyShiftLogic {
 
         String yearMonth = "";
 
-        List<DateBean> dateBeanList = monthlyShiftCheckForm.getDateBeanList();
-        int listSize = dateBeanList.size();
-
+        
         //2024.09.09 井上 for内の i < 31を i < listSizeに変更。
         for (int i = 0; i < listSize; i++) {
             DateBean dateBean = null;
@@ -236,7 +246,7 @@ public class MonthlyShiftLogic {
         List<String> employeeNameList = new ArrayList<>();
 
         // 日毎（列ごと）のリストを配列に保持
-        List<String>[] shiftIdLists = new List[30]; // 31日分のリスト
+        List<String>[] shiftIdLists = new List[listSize]; // 31日分のリスト
         for (int i = 0; i < shiftIdLists.length; i++) {
             shiftIdLists[i] = new ArrayList<>(); // 初期化
         }
