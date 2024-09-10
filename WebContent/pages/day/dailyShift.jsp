@@ -96,7 +96,8 @@
           <html:form><!-- 2024/09/05/尾崎/actionを追加 -->
             <div style="height: 20px; margin-left:405px;">
               表示年月：
-              <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=previous">前日</html:link><!-- 2024/09/05/尾崎/previousに変更 -->
+              <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=back">前日</html:link><%-- 2024/09/05/尾崎/previousに変更 --%>
+              <%-- 20240910　副島　詳細設計書に合わせてbackに再修正 --%>
               <bean:write name="dailyShiftForm" property="yearMonthDayDisplay"/>
               <html:link href="/kikin-for-Struts-bug/dailyShiftPage.do?paging=next">翌日</html:link>
             </div>
