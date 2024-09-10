@@ -150,6 +150,11 @@ errorbody {
     border-radius: 30px;
 }
 
+.smallButton:hover {
+	background-color:#ccf;
+	color:#111;
+}
+
 /*
 * ボタンサイズ大
 */
@@ -161,6 +166,11 @@ errorbody {
 	color:#ECECEC;
 }
 
+.bigButton:hover {
+	background-color:#ccf;
+	color:#111;
+}
+
 /*
 * ボタンサイズロング
 */
@@ -168,7 +178,12 @@ errorbody {
     width: 200px;
     height: 30px;
     border-radius: 30px;
-    
+}
+
+.longButton:hover {
+	background-color:#ccf;
+	color:#111;
+    border-radius: 30px;
 }
 
 
