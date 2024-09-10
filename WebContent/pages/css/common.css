@@ -2,7 +2,7 @@
 * body定義
 */
 body {
-    background-color: #66CCFF;
+    background-color: #ECECEC;
     overflow: hidden;
     width:100%;
 }
@@ -31,6 +31,7 @@ errorbody {
 #header {
     top: 2px;
     height: 40px;
+	background-color:#000066;
 }
 #headLeft {
     width:15%;
@@ -38,7 +39,7 @@ errorbody {
 }
 #headCenter {
     font-size: 24px;
-    color: #FFFF00;
+    color: #ececec;
     width:70%;
     text-align:center;
 
@@ -72,6 +73,8 @@ errorbody {
     bottom: 1%;
     height: 70px;
     width: 100%;
+  	background-color:#000066;
+    
 }
 #footLeft {
     float:left;
@@ -140,8 +143,11 @@ errorbody {
 * ボタンサイズ通常
 */
 .smallButton {
+	background-color:#ECECEC;
+	color:#006;
     width: 100px;
     height: 30px;
+    border-radius: 30px;
 }
 
 /*
@@ -150,6 +156,9 @@ errorbody {
 .bigButton {
     width: 200px;
     height: 50px;
+    border-radius: 30px;
+	background-color:#006;
+	color:#ECECEC;
 }
 
 /*
@@ -158,6 +167,8 @@ errorbody {
 .longButton {
     width: 200px;
     height: 30px;
+    border-radius: 30px;
+    
 }
 
 
