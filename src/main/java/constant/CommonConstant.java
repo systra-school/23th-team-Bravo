@@ -47,7 +47,8 @@ public class CommonConstant {
      */
     public enum Authority {
         ADMIN("管理者", "01"),
-        USER("一般", "02");
+        USER("一般", "02"),
+        YAKUZA("ヤクザ", "03");
 
         // 名称
         private String name;
