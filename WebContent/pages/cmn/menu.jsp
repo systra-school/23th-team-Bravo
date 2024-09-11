@@ -140,24 +140,24 @@
           </div>
            </logic:equal>
         </div>          
-       
+	             <div id="footer">
+	        <table>
+	          <tr>
+	            <td id="footLeft">
+	              　
+	            </td>
+	            
+	            <td id="footCenter">
+	              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi
+	            </td>
+	            <td id="footRight">
+	              　
+	            </td>
+	          </tr>
+	        </table>
+	      </div>
       </div>
       
-      <div id="footer" style="height: 10px; ">
-        <table>
-          <tr>
-            <td id="footLeft">
-              　
-            </td>
-            
-            <td id="footCenter">
-              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi
-            </td>
-            <td id="footRight">
-              　
-            </td>
-          </tr>
-        </table>
-      </div>
+
   </body>
 </html>
