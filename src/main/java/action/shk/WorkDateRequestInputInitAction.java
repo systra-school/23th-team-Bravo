@@ -7,6 +7,7 @@
 package action.shk;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -22,14 +23,17 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import business.dto.LoginUserDto;
+import business.dto.mst.ShiftMstMntDto;
 import business.dto.shk.WorkDateRequestCheckDto;
 import business.logic.comparator.MethodComparator;
+import business.logic.mst.ShiftMstMntLogic;
 import business.logic.shk.WorkDateRequestLogic;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.ComboListUtilLogic;
 import business.logic.utils.CommonUtils;
 import constant.CommonConstant;
 import constant.RequestSessionNameConstant;
+import form.cmn.ShiftPatternBean;
 import form.common.DateBean;
 import form.shk.WorkDateRequestInputBean;
 import form.shk.WorkDateRequestInputForm;
@@ -59,12 +63,17 @@ public class WorkDateRequestInputInitAction extends WorkDateRequestAbstractActio
         LoginUserDto loginUserDto = (LoginUserDto) session.getAttribute(RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO);
         // フォーム
         WorkDateRequestInputForm workDateRequestInputForm = (WorkDateRequestInputForm) form;
+        //ShiftPatternForm baseShiftMstMntForm = (ShiftPatternForm) form;
         // 対象年月
         String yearMonth = CommonUtils.getFisicalDay(CommonConstant.YEARMONTH_NOSL);
         // ロジック生成
+        ShiftMstMntLogic shiftMstMntLogic = new ShiftMstMntLogic();
         WorkDateRequestLogic workDateRequestLogic = new WorkDateRequestLogic();
         // 対象年月の月情報を取得する。
         List<DateBean> dateBeanList = CommonUtils.getDateBeanList(yearMonth);
+        List<ShiftMstMntDto> shiftMstMntDto = shiftMstMntLogic.getShiftData(loginUserDto);
+        List<ShiftPatternBean> shiftPatternBeanList = this.shiftPatternDataToBean(shiftMstMntDto);
+        workDateRequestInputForm.setShiftPatternBeanList(shiftPatternBeanList);
         // セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
         Map<String, String> shiftCmbMap = comboListUtils.getComboShift(true);
@@ -92,6 +101,7 @@ public class WorkDateRequestInputInitAction extends WorkDateRequestAbstractActio
         workDateRequestInputForm.setWorkDateRequestInputBeanList(workDateRequestInputBeanList);
         workDateRequestInputForm.setDateBeanList(dateBeanList);
         workDateRequestInputForm.setYearMonth(yearMonth);
+        
         return mapping.findForward(forward);
     }
     /**
@@ -141,4 +151,34 @@ public class WorkDateRequestInputInitAction extends WorkDateRequestAbstractActio
         }
         return workDateRequestInputBeanList;
     }
+    
+    /**
+     * dtoデータをBeanのリストへ変換する
+     * @param shiftMstMntDtoList 勤務実績マップ key 稼働日, val 勤務実績Dto
+     * @return
+     * @author nishioka
+     * @throws ParseException
+     */
+    private List<ShiftPatternBean> shiftPatternDataToBean(
+            List<ShiftMstMntDto> shiftMstMntDtoList
+    ) throws ParseException {
+
+        // 戻り値
+        List<ShiftPatternBean> returnList = new  ArrayList<ShiftPatternBean>(shiftMstMntDtoList.size());
+
+        for (ShiftMstMntDto shiftMstMntDto: shiftMstMntDtoList) {
+
+            // 勤務実績Bean
+            ShiftPatternBean shiftPatternBean = new ShiftPatternBean();
+            shiftPatternBean.setShiftName(shiftMstMntDto.getShiftName());
+            shiftPatternBean.setSymbol(shiftMstMntDto.getSymbol());
+            shiftPatternBean.setTimeZone(shiftMstMntDto.getStartTime() + "&nbsp;&#xFF5E;&nbsp;" + shiftMstMntDto.getEndTime());
+            shiftPatternBean.setBreakTime(shiftMstMntDto.getBreakTime());
+
+            returnList.add(shiftPatternBean);
+        }
+
+        return returnList;
+    }
+    
 }
