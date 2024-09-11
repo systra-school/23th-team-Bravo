@@ -160,7 +160,7 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="height:500px;">
         <html:form action="/workRecordInputRegister" ><!-- 2024/09/04/尾崎/actionを変更 -->
           <div style="width: 100%;">
             <div style="float: left; width: 804px; text-align: left; margin-left:100px;">
