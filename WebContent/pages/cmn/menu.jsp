@@ -140,10 +140,7 @@
           </div>
            </logic:equal>
         </div>          
-       
-      </div>
-      
-      <div id="footer">
+             <div id="footer">
         <table>
           <tr>
             <td id="footLeft">
@@ -151,7 +148,7 @@
             </td>
             
             <td id="footCenter">
-              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi
+              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.
             </td>
             <td id="footRight">
               　
@@ -159,5 +156,8 @@
           </tr>
         </table>
       </div>
+      </div>
+      
+
   </body>
 </html>

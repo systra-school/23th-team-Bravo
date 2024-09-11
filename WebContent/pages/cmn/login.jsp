@@ -64,7 +64,7 @@
 			<table>
 				<tr>
 					<td id="footLeft"></td>
-					<td id="footCenter">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi</td>
+					<td id="footCenter">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</td>
 					<td id="footRight"></td>
 				</tr>
 			</table>

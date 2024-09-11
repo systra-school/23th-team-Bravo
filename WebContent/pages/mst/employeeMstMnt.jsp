@@ -157,10 +157,10 @@
 				</tr>
 			</table>
 		</div>
-		<div id="businessBody">
+		<div id="businessBody" style="margin-top:32px;">
 			<html:form action="/employeeMstMntUpdate">
 				<div style="overflow: hidden; margin: 0 auto; width: 1030px;">
-					<table class="tableHeader">
+					<table class="tableHeader" style="border:2px solid #000">
 						<tr>
 							<td width="200px" align="center">社員ＩＤ</td>
 							<td width="200px" align="center">パスワード</td>
@@ -175,7 +175,7 @@
 				</div>
 				<div
 					style="overflow: auto; height: 440px; width: 1030px; margin: 0 auto;">
-					<table class="tableBody">
+					<table class="tableBody" style="border:2px solid #000">
 						<logic:iterate indexId="idx" id="employeeMstMntBeanList"
 							name="employeeMstMntForm" property="employeeMstMntBeanList">
 							<bean:define id="employeeId" name="employeeMstMntBeanList"
