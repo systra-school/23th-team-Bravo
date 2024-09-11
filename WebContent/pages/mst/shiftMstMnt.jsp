@@ -158,7 +158,7 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="margin-top:24px;">
         <html:form  action="/shiftMstMntUpdate">
           <div style="width: 600px; margin: 0 auto;">
             <table class="tableHeader">

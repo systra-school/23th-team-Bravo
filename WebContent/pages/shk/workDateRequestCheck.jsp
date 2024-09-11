@@ -96,7 +96,7 @@
                           &nbsp;
                         </td>
                       </tr>
-                      <tr class="tableHeader">
+                      <tr class="tableHeader" style="background-color:#ccf;">
                         <td width="150px" nowrap="nowrap" align="center">
                         社員名
                         </td>
@@ -120,7 +120,7 @@
                           	 </td>
                       	  <% } %>
                         </tr>
-                        <tr class="tableHeader">
+                        <tr class="tableHeader" style="background-color:#ccf;">
 						<logic:iterate id="dateBeanList" name="workDateRequestCheckForm" property="dateBeanList">
                           <bean:define id="weekDayEnum" name="dateBeanList" property="weekDayEnum"/>
                           <bean:define id="publicHolidayFlg" name="dateBeanList" property="publicHolidayFlg"/>

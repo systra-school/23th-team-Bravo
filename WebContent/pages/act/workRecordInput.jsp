@@ -133,6 +133,7 @@
       #businessBody {
         display: flex;
         justify-content: center;
+        margin:20px 0; 
       }
       .tableContainer {
         width: 1080px;

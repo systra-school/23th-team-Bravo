@@ -92,7 +92,7 @@
       </div>
       <br>
       <div id="businessBody" style="overflow: hidden;">
-        <div style="margin-left:22%;">
+        <div style="margin-left:15%;">
           <html:form><!-- 2024/09/05/尾崎/actionを追加 -->
             <div style="height: 20px; margin-left:405px;">
               表示年月：

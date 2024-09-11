@@ -107,7 +107,7 @@
                   <td>
                     <div style="overflow-x: auto;overflow-y: hidden; width:800px;height: 100%; ">
                       <table class="tableBody">
-                        <tr class="tableHeader" >
+                        <tr class="tableHeader">
                           <% for(int i = 1;i <= dateBeanListSize;i++ ) { %>
                         	 <td width="40px" align="center" valign="middle">
                           		<%= i %> 

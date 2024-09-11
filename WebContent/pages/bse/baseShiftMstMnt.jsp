@@ -60,7 +60,7 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="margin-top:24px;">
         <html:form action="/baseShiftRegister" >
           <div class="centered-container">
           <%-- 凡例 --%>
