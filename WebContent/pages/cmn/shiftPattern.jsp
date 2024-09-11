@@ -82,7 +82,7 @@
                       <bean:write property="timeZone" name="shiftPatternBeanList" filter="false"/>
                     </td>
                     <td width="50px" align="center">
-                      <bean:write property="shiftName" name="shiftPatternBeanList"/>
+                      <bean:write property="breakTime" name="shiftPatternBeanList"/>
                     </td>
                   </tr>
                 </logic:iterate>

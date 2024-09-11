@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.apache.struts.action.ActionForm;
 
+import form.cmn.ShiftPatternBean;
 import form.common.DateBean;
 
 /**
@@ -30,6 +31,8 @@ public class WorkDateRequestInputForm extends ActionForm {
     private Map<String, String> shiftCmbMap;
     /** 年月コンボ */
     private Map<String, String> yearMonthCmbMap;
+    
+    private List<ShiftPatternBean> shiftPatternBeanList;
     
 	public List<WorkDateRequestInputBean> getWorkDateRequestInputBeanList() {
 		return workDateRequestInputBeanList;
@@ -60,5 +63,11 @@ public class WorkDateRequestInputForm extends ActionForm {
 	}
 	public void setYearMonthCmbMap(Map<String, String> yearMonthCmbMap) {
 		this.yearMonthCmbMap = yearMonthCmbMap;
+	}
+	public List<ShiftPatternBean> getShiftPatternBeanList() {
+		return shiftPatternBeanList;
+	}
+	public void setShiftPatternBeanList(List<ShiftPatternBean> shiftPatternBeanList) {
+		this.shiftPatternBeanList = shiftPatternBeanList;
 	}
 }

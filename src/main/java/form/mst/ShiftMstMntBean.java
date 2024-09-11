@@ -25,6 +25,9 @@ public class ShiftMstMntBean {
     private String endTime;
     /** 休憩時間 */
     private String breakTime;
+    
+    private String workTime;
+    
     /** 削除シフトＩＤ */
     private String deleteShiftId;
     /** 削除シフト */
@@ -77,5 +80,11 @@ public class ShiftMstMntBean {
 	}
 	public void setDeleteFlg(boolean deleteFlg) {
 		this.deleteFlg = deleteFlg;
+	}
+	public String getWorkTime() {
+		return workTime;
+	}
+	public void setWorkTime(String workTime) {
+		this.workTime = workTime;
 	}
 }

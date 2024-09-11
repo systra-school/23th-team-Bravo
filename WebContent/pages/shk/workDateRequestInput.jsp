@@ -95,8 +95,9 @@
         	</table>
       	</div>
       	<div id="businessBody" style="overflow: hidden;">
-      	<%-- 20240828 副島 margin-leftをmargin-rightに変更--%>
-        <div style="margin-right:20%;">
+      	<%-- 20240828 副島 m<div style="margin-right:20%;">argin-leftをmargin-rightに変更--%>
+        <div style="margin: 0 auto; width: 80%;">
+        
           <html:form action="/workDateRequestInputRegister" ><!-- 2024/09/06/尾崎/登録処理の修正 -->
             表示年月：
             <html:select name="workDateRequestInputForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workDateRequestInputSearch.do')">
@@ -186,12 +187,73 @@
               </table>
             </div>
 		 </html:form>
-		 <div style="margin-left:50px;">
-            <input value="凡例表示" type="button" class="longButton"  onclick="openWindow()" />        
-         </div>
+		 
         </div>
+        <div id="wrapper" style="margin-top:50px;">
+      <div id="header">
+        <table class="full-width">
+          <tr>
+            <td id="headLeft">
+            </td>
+            <td id="headCenter">
+              シフト凡例
+            </td>
+            <td id="headRight">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="businessBody"style="overflow: hidden;">
+        <html:form>
+          <%-- 凡例 --%>
+          <div id="pattern" style="width:470px; margin: 0 auto;">
+            <div>
+              <table class="tableHeader">
+                <tr>
+                  <td width="100px" align="center">
+                    シフト名
+                  </td>
+                  <td width="150px" align="center">
+                    シンボル
+                  </td>
+                  <td width="150px" align="center">
+                    時間
+                  </td>
+                  <td width="50px" align="center">
+                    休憩
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="height:450px;overflow:auto">
+              <table class="tableBody">
+                <logic:iterate id="shiftPatternBeanList" name="workDateRequestInputForm"  property="shiftPatternBeanList" indexId="idx">
+                  <tr>
+                    <td width="100px" align="center">
+                      <bean:write property="shiftName" name="shiftPatternBeanList"/>
+                    </td>
+                    <td width="150px" align="center">
+                      <bean:write property="symbol" name="shiftPatternBeanList"/>
+                    </td>
+                    <td width="150px" align="center">
+                      <bean:write property="timeZone" name="shiftPatternBeanList" filter="false"/>
+                    </td>
+                    <td width="50px" align="center">
+                      <bean:write property="breakTime" name="shiftPatternBeanList"/>
+                    </td>
+                  </tr>
+                </logic:iterate>
+              </table>
+            </div>
+          </div>
+        </html:form>
+      </div>
+      
+      
        </div>
-	<div id="footer">
+	
+      </div>
+      <div id="footer">
         <table>
           <tr>
             <td id="footLeft">
@@ -208,5 +270,6 @@
         </table>
       </div>
     </div>
+    
   </body>
 </html>
