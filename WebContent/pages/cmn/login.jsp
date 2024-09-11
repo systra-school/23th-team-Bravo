@@ -44,25 +44,27 @@
 
 		<div id="businessBody">
 			<div align="center">
-				<div>ID・パスワードを入力してください。</div>
+				<div class="loginForm">ID・パスワードを入力してください。
 				<html:form action="/login" onsubmit="return validateLoginForm(this)">
 
+					<label class="userName">ユーザー名</label>
 					<html:text property="employeeId" size="16" value="" /><!-- 2024/09/09/尾崎/初期値を消去 -->
 					<br />
-					<html:password property="password" size="16" redisplay="false"
-					 />
+					<label class="passWord">パスワード</label>
+					<html:password property="password" size="16" redisplay="false" />
 					<br />
 					<br />
 					<html:submit property="submit" value="ログイン" />
 					<html:reset value="リセット" />
 				</html:form>
+				</div>
 			</div>
 		</div>
 		<div id="footer">
 			<table>
 				<tr>
 					<td id="footLeft"></td>
-					<td id="footCenter"></td>
+					<td id="footCenter">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi</td>
 					<td id="footRight"></td>
 				</tr>
 			</table>

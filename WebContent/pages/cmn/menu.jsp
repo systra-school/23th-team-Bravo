@@ -149,8 +149,9 @@
             <td id="footLeft">
               　
             </td>
+            
             <td id="footCenter">
-              　
+              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi
             </td>
             <td id="footRight">
               　

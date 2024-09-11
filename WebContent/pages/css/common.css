@@ -46,7 +46,6 @@ errorbody {
     color: #ececec;
     width:70%;
     text-align:center;
-
 }
 #headRight {
     width:15%;
@@ -88,6 +87,7 @@ errorbody {
 #footCenter {
     width:100%;
     text-align:center;
+    color:#fff;
 }
 #footRight {
     float:right;
@@ -168,6 +168,8 @@ errorbody {
     border-radius: 30px;
 	background-color:#006;
 	color:#ECECEC;
+	border:2px solid #111;
+	
 }
 
 .bigButton:hover {
@@ -288,3 +290,13 @@ tbody tr.tableBody:nth-child(even) td{
     color: red;
 }
 
+
+/*追加css ログイン*/
+.loginForm{
+	margin-top:50px;
+	background-color:#ccc;
+	width:30%;
+	border-radius:20px;
+	padding:15px;
+	border:2px solid #000;
+}
