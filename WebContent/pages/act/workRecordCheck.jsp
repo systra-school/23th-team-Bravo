@@ -62,7 +62,7 @@ String color = "";
         <html:form action="/employeeMstMntRegister" >
         <br>
           <div style="float: left; width: 100%;">
-            <div style="float: left; width: 804px; text-align: left; margin-left:22%;">
+            <div style="float: left; width: 320px; text-align: left; margin-left:22%;">
               表示年月：
               <html:select name="workRecordCheckForm" property="yearMonth" onchange="submitSearch('/kikin-for-Struts-bug/workRecordCheckSearch.do')">
               <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/workRecordCheckSearch.do')に書き換え -->
@@ -72,7 +72,7 @@ String color = "";
                                       label="value"/>
               </html:select>
             </div>
-            <div style="float: left; width: 244px; text-align: center;">
+            <div style="float: left; width: 600px; text-align: right;">
               社員名：
               <html:select name="workRecordCheckForm" property="employeeId" onchange="submitSearch()">
               

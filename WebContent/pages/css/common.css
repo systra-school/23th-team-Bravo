@@ -12,7 +12,9 @@ errorbody {
 #wrapper {
     width:99%;
     height:100%;
-    padding:0px;
+    /*padding:0px;*/
+    background-image:url("../img/bg_image.jpg");
+    background-size:cover;
 }
 
 
@@ -136,7 +138,7 @@ errorbody {
 
 #resize{
 	 transform: scale(0.95);
-	 text-align: -webkit-center;
+	 text-align: -webkit-left;
 }
 
 #left{
@@ -230,7 +232,11 @@ errorbody {
 }
 
 tbody tr.tableBody:nth-child(even) td{
-	background-color:#ffc;
+	background-color:#ccc;
+}
+
+.tableBody tbody tr:nth-child(even){
+	background-color:#ccc;
 }
 
 .full-width {
@@ -248,6 +254,7 @@ tbody tr.tableBody:nth-child(even) td{
 .widthTable{
 	width: 1500px;
     border-collapse: collapse;
+    margin-left:50px;
 }
 .widthTable td, .widthTable th {
         padding: 0;
