@@ -2,7 +2,7 @@
 * body定義
 */
 body {
-    background-color: #ECECEC;
+    background-color: #006;
     overflow: hidden;
     width:100%;
 }
@@ -84,7 +84,7 @@ errorbody {
 #footer {
     bottom: 1%;
     height: 70px;
-    width: 100%;
+    width: 99%;
     position: absolute;
   	background-color:#006;
     
@@ -240,11 +240,11 @@ errorbody {
 }
 
 tbody tr.tableBody:nth-child(even) td{
-	background-color:#ccc;
+	background-color:#dcdcdc;
 }
 
 .tableBody tbody tr:nth-child(even){
-	background-color:#ccc;
+	background-color:#dcdcdc;
 }
 
 .full-width {
