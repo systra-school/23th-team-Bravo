@@ -75,6 +75,7 @@ if (listSize > intShowLength) {
      */
      <!-- 2024/09/02/尾崎/functionの書き換え -->
     function submitRegister(action) {
+    	document.getElementById('loadingImage').style.display = 'block';
         // サブミット
         document.forms[0].action = "/kikin-for-Struts-bug/monthlyShiftInputRegister.do";
         document.forms[0].submit();
@@ -461,6 +462,9 @@ if (listSize > intShowLength) {
             </div>
           </div>
         </html:form>
+      </div>
+      <div id="loadingImage">
+        <img src="/kikin-for-Struts-bug/pages/img/img01.jpg" alt="Loading...">
       </div>
       <div id="footer">
         <table>

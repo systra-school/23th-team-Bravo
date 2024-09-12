@@ -16,7 +16,14 @@ errorbody {
     background-image:url("../img/bg_image.jpg");
     background-size:cover;
 }
-
+#loadingImage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
 
 /*
 * ヘッダー、フッター共通定義
@@ -77,7 +84,7 @@ errorbody {
 #footer {
     bottom: 1%;
     height: 70px;
-    width: 99%;
+    width: 100%;
     position: absolute;
   	background-color:#006;
     
