@@ -5,7 +5,8 @@
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
-
+<bean:define id="employeeName" name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>" 
+		scope="session" type="java.lang.String"  property="employeeName" />
 <html lang="ja">
   <head>
     <meta http-equiv="Pragma" content="no-cache">
@@ -39,6 +40,10 @@
                          value="<%=CommonConstant.Authority.USER.getId() %>">
                 　　メニュー(一般)
             </logic:equal>
+            
+            		    <%-- 追加機能 ログイン中の名前表示 --%>
+            <bean:write name="employeeName"/>でログイン中！
+
             </td>
             <td id="headRight">
               <input value="ログアウト" type="button" class="smallButton"  onclick="logout()" />
@@ -58,9 +63,7 @@
             <html:form action="/dailyShiftInit">
               <input type="submit" value="日別シフト確認" class="bigButton" />
             </html:form>
-            
-            
-            
+
           </div>
 
           <div class="menuBlock">
