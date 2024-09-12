@@ -42,7 +42,7 @@
             </logic:equal>
             
             		    <%-- 追加機能 ログイン中の名前表示 --%>
-            <bean:write name="employeeName"/>でログイン中！
+            <bean:write name="employeeName"/>様がログイン中！
 
             </td>
             <td id="headRight">
