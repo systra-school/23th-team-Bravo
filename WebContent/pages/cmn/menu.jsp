@@ -38,7 +38,7 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.USER.getId() %>">
-                　　一般：
+                　　一般社員：
             </logic:equal>
             
             		    <%-- 追加機能 ログイン中の名前表示 --%>
