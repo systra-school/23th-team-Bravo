@@ -98,10 +98,10 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="margin-bottom:24px;">
         <html:form action="/employeeMstMntRegister" >
           <div style="width: 650px;text-align: left;  margin: 0 auto;">
-            <table class="tableHeader">
+            <table class="tableHeader" style="margin-top:24px;">
               <tr>
                 <td width="150px" align="center">
                   パスワード
@@ -144,6 +144,16 @@
             </table>
           </div>
         </html:form>
+        
+          <div class="warning" style="margin-top:-360px;">
+        	<h2>記入に関して(tips)</h2>
+        	<ul>
+        		<li>パスワードは半角英数で入力してください(6文字まで)。</li>
+        		<li>社員名は全角で入力してください(20文字まで)。</li>
+        		<li>カナは半角で入力してください(20文字まで)。</li>
+        	</ul>
+        </div>
+        
       </div>
       <div id="footer">
         <table>

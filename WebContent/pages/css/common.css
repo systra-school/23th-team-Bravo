@@ -315,3 +315,17 @@ tbody tr.tableBody:nth-child(even) td{
 	padding:15px;
 	border:2px solid #000;
 }
+
+.warning {
+	width :650px;
+	margin:0 auto;
+	background-color:#eee;
+	border:1px solid #111;
+	border-radius:10px;
+}
+
+.warning h2{
+	font-size:18px;
+	padding-left:16px;
+	
+}

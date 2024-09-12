@@ -94,7 +94,7 @@
           		</tr>
         	</table>
       	</div>
-      	<div id="businessBody" style="overflow: hidden;">
+      	<div id="businessBody" style="overflow: hidden; margin-top:24px;">
       	<%-- 20240828 副島 m<div style="margin-right:20%;">argin-leftをmargin-rightに変更--%>
         <div style="margin: 0 auto; width: 80%;">
         
@@ -190,7 +190,7 @@
 		 
         </div>
         <div id="wrapper" style="margin-top:50px;">
-      <div id="header">
+      <!-- <div id="header">
         <table class="full-width">
           <tr>
             <td id="headLeft">
@@ -202,7 +202,7 @@
             </td>
           </tr>
         </table>
-      </div>
+      </div>-->
       <div id="businessBody"style="overflow: hidden;">
         <html:form>
           <%-- 凡例 --%>
