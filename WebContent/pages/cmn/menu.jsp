@@ -32,17 +32,17 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.ADMIN.getId() %>">
-                　　メニュー(管理者)
+                　　管理者：
             </logic:equal>
 
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="authorityId"
                          value="<%=CommonConstant.Authority.USER.getId() %>">
-                　　メニュー(一般)
+                　　一般：
             </logic:equal>
             
             		    <%-- 追加機能 ログイン中の名前表示 --%>
-            <bean:write name="employeeName"/>様がログイン中！
+            <bean:write name="employeeName"/> 様がログイン！
 
             </td>
             <td id="headRight">
@@ -151,7 +151,7 @@
 	            </td>
 	            
 	            <td id="footCenter">
-	              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki,Oishi
+	              　&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.
 	            </td>
 	            <td id="footRight">
 	              　
