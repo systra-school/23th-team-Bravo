@@ -464,7 +464,7 @@ if (listSize > intShowLength) {
         </html:form>
       </div>
       <div id="loadingImage">
-        <img src="/kikin-for-Struts-bug/pages/img/img01.jpg" alt="Loading...">
+        <img src="/kikin-for-Struts-bug/pages/img/フェッチ中.gif" alt="Loading...">
       </div>
       <div id="footer">
         <table>
