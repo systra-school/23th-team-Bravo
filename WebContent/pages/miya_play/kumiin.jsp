@@ -29,10 +29,11 @@
 		<img src="/kikin-for-Struts-bug/pages/miya_play/miya_cat.png" class="" alt="miya_cat" width="480px" height="440px">
 
 		<br>
-		<div id="rogo">
-			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/佐々木ロゴ.png" alt="懐刀"></a>
-			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/kake_rogo.png" alt="密売人"></a>
-			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/DJ_KZ.png" alt="DJ"></a>
+		<div id="real">
+			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/佐々木ロゴ.png" alt="懐刀" width="250px" height="120px"></a>
+			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/kake_rogo.png" alt="密売人" width="250px" height="120px"></a>
+			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/地元最高!!.png" alt="DJ" width="250px" height="120px"></a>
+			<a href="" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/miya_cat_ロゴ.png" alt="nyan" width="450px" height="120px"></a>
 		</div>
 
 

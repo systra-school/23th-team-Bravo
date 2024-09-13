@@ -12,3 +12,7 @@ body {
 .ura:hover {
 	opacity: .5;
 }
+
+#real img {
+	margin-left: 25px;
+}
