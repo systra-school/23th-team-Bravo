@@ -1,5 +1,7 @@
 body {
     margin: 0px 0px;
+    background-image:url("/kikin-for-Struts-bug/pages/miya_play/101197887_p14_master1200.jpg");
+    background-size:cover;
 }
 
 
@@ -15,4 +17,8 @@ body {
 
 #real img {
 	margin-left: 25px;
+}
+
+#setumei{
+	padding-left: 300px;
 }

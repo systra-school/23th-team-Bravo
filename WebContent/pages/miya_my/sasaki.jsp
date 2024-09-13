@@ -4,17 +4,17 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>宮平力斗</title>
+		<title>佐々木徹</title>
  		<link href="/kikin-for-Struts-bug/pages/css/miyahira.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
 	
-		<img alt="リーダー" src="/kikin-for-Struts-bug/pages/miya_play/宮平_立ち絵.png" align="left">
+		<img alt="懐刀" src="/kikin-for-Struts-bug/pages/miya_play/佐々木先生.png" align="left"	 width="300px" height="530px">
 		
 		<div id="setumei">
 		
-		<img alt="宮平説明" src="/kikin-for-Struts-bug/pages/miya_play/宮平説明.png">
+		<img alt="佐々木説明" src="/kikin-for-Struts-bug/pages/miya_play/佐々木説明.png">
 	
 	</div>
 	</body>

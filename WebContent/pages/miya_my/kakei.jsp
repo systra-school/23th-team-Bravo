@@ -4,17 +4,17 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>宮平力斗</title>
+		<title>掛江拓人</title>
  		<link href="/kikin-for-Struts-bug/pages/css/miyahira.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
 	
-		<img alt="リーダー" src="/kikin-for-Struts-bug/pages/miya_play/宮平_立ち絵.png" align="left">
+		<img alt="掛江" src="/kikin-for-Struts-bug/pages/miya_play/kake.png" align="left" width="250px" height="530px">
 		
 		<div id="setumei">
 		
-		<img alt="宮平説明" src="/kikin-for-Struts-bug/pages/miya_play/宮平説明.png">
+		<img alt="掛江説明" src="/kikin-for-Struts-bug/pages/miya_play/掛江説明.png">
 	
 	</div>
 	</body>

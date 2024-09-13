@@ -4,17 +4,17 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>宮平力斗</title>
+		<title>副島毅信</title>
  		<link href="/kikin-for-Struts-bug/pages/css/miyahira.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
 	
-		<img alt="リーダー" src="/kikin-for-Struts-bug/pages/miya_play/宮平_立ち絵.png" align="left">
+		<img alt="サブリーダー" src="/kikin-for-Struts-bug/pages/miya_play/副島_立ち絵.png" align="left">
 		
 		<div id="setumei">
 		
-		<img alt="宮平説明" src="/kikin-for-Struts-bug/pages/miya_play/宮平説明.png">
+		<img alt="副島説明" src="/kikin-for-Struts-bug/pages/miya_play/副島説明.png">
 	
 	</div>
 	</body>
