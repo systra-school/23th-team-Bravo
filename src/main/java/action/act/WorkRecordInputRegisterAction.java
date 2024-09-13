@@ -60,6 +60,8 @@ public class WorkRecordInputRegisterAction extends Action {
 
         // セッション
         HttpSession session = req.getSession();
+        
+        session.removeAttribute("totalActualWorkTime");
 
         // フォワードキー
         String forward = "";

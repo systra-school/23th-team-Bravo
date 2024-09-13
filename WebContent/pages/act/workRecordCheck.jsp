@@ -175,6 +175,17 @@ String color = "";
               </table>
             </logic:iterate>
           </div>
+          
+           <table class="tableBody" style="margin: 0 auto; ">
+            <tr>
+            <td width="510px" align="center">
+                    合計実労働時間
+                  </td>
+            <td width="100px" align="center">
+                    <bean:write name="workRecordCheckForm" property="totalActualWorkTime" />
+                  </td>
+            </tr>
+            </table>
          
       </html:form>
     </div>
