@@ -22,6 +22,8 @@ public class WorkRecordInputForm extends ActionForm {
 
     /** 勤務実績入力確認BeanList */
     private List<WorkRecordInputBean> workRecordInputList;
+    
+    private String totalActualWorkTime;
     /** 日付リスト */
     private List<DateBean> dateBeanList;
     /** 年月コンボ */
@@ -34,6 +36,8 @@ public class WorkRecordInputForm extends ActionForm {
     private String employeeId;
     /** 社員名 */
     private String employeeName;
+    
+    
 
     /** ページング用 */
     private String paging;
@@ -100,5 +104,13 @@ public class WorkRecordInputForm extends ActionForm {
 
 	public void setPaging(String paging) {
 		this.paging = paging;
+	}
+
+	public String getTotalActualWorkTime() {
+		return totalActualWorkTime;
+	}
+
+	public void setTotalActualWorkTime(String totalActualWorkTime) {
+		this.totalActualWorkTime = totalActualWorkTime;
 	}
 }

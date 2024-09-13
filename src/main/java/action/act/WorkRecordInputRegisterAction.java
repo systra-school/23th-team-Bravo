@@ -101,7 +101,15 @@ public class WorkRecordInputRegisterAction extends Action {
 
         // データを変換する
         List<WorkRecordInputBean> workRecordList = this.dtoToBean(dateBeanList, workRecordMap, loginUserDto);
-
+        
+        if (workRecordList == null || workRecordList.isEmpty()) {
+            workRecordForm.setTotalActualWorkTime("00:00");
+        } else {
+            // 勤務実績の合計時間を計算
+            String totalActualWorkTime = workRecordLogic.calculateTotalActualWorkTime(workRecordList);
+            workRecordForm.setTotalActualWorkTime(totalActualWorkTime);
+        }
+        
         // フォームにデータをセットする
         workRecordForm.setDateBeanList(dateBeanList);
         workRecordForm.setWorkRecordInputList(workRecordList);

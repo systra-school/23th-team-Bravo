@@ -279,7 +279,18 @@
           </div>
         </html:form>
       </div>
-      <div id="footer">
+      
+      <table class="tableBody" style="margin-top: 5px;">
+            <tr>
+            <td width="510px" align="center">
+                    合計実労働時間
+                  </td>
+            <td width="100px" align="center">
+                    <bean:write name="workRecordInputForm" property="totalActualWorkTime" />
+                  </td>
+            </tr>
+            </table>
+      <div id="footer" style="height: 30px;">
         <table>
           <tr>
               <td id="footLeft">

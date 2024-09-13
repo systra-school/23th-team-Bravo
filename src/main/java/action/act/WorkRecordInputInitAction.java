@@ -60,6 +60,10 @@ public class WorkRecordInputInitAction extends Action {
 
         // セッション
         HttpSession session = req.getSession();
+        
+     // セッションから合計時間を削除
+        session.removeAttribute("totalActualWorkTime");
+
 
         // フォワードキー
         String forward = "";
@@ -92,18 +96,32 @@ public class WorkRecordInputInitAction extends Action {
 
         // データを変換する
         List<WorkRecordInputBean> workRecordList = this.dtoToBean(dateBeanList, workRecordMap, loginUserDto);
-
+        
+        if (workRecordList == null || workRecordList.isEmpty()) {
+            workRecordInputForm.setTotalActualWorkTime("00:00");
+        } else {
+            // 勤務実績の合計時間を計算
+            String totalActualWorkTime = workRecordLogic.calculateTotalActualWorkTime(workRecordList);
+            workRecordInputForm.setTotalActualWorkTime(totalActualWorkTime);
+        }
+        
         // フォームにデータをセットする
         workRecordInputForm.setDateBeanList(dateBeanList);
         workRecordInputForm.setWorkRecordInputList(workRecordList);
         workRecordInputForm.setYearMonthCmbMap(yearMonthCmbMap);
         workRecordInputForm.setEmployeeId(loginUserDto.getEmployeeId());
         workRecordInputForm.setEmployeeName(loginUserDto.getEmployeeName());
+     
+        
+        
 
         forward = CommonConstant.SUCCESS;
 
         return mapping.findForward(forward);
     }
+    
+    
+
 
     /**
      * dtoデータをBeanのリストへ変換する
@@ -164,6 +182,7 @@ public class WorkRecordInputInitAction extends Action {
             workRecordInputBean.setEndTime(workRecordDto.getEndTime());
             workRecordInputBean.setBreakTime(workRecordDto.getBreakTime());
             workRecordInputBean.setActualWorkTime(workRecordDto.getActualWorkTime());
+            workRecordInputBean.setTotalActualWorkTime(workRecordDto.getTotalActualWorkTime());
             workRecordInputBean.setOverTime(workRecordDto.getOverTime());
             workRecordInputBean.setHolidayTime(workRecordDto.getHolidayTime());
             workRecordInputBean.setRemark(workRecordDto.getRemark());

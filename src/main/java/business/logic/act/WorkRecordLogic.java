@@ -18,6 +18,7 @@ import business.dto.act.WorkRecordDto;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.CommonUtils;
 import exception.CommonException;
+import form.act.WorkRecordInputBean;
 
 /**
  * 説明：ログイン処理のロジック
@@ -135,8 +136,14 @@ public class WorkRecordLogic {
 	public void calculation(List<WorkRecordDto> workRecordDtoList) throws ParseException {
 
 		final String colon = ":";
+		
+		long totalActualWorkTimeMinutes = 0;
+		long totalActualWorkTimeHours = 0;
+		
 
 		for (WorkRecordDto workRecordDto : workRecordDtoList) {
+			
+			
 
 			// 画面のリスト分処理を繰り返す
 
@@ -168,16 +175,24 @@ public class WorkRecordLogic {
 
 			// 秒を60で除算する → 分に変換。
 			long actualWorkTimeMinutes = actualWorkTimeSeconds / 60; // 分
+			totalActualWorkTimeMinutes += actualWorkTimeSeconds / 60;
 			// 分を60で除算する → 時に変換。
 			long actualWorkTimeHours = actualWorkTimeMinutes / 60; // 時
+			totalActualWorkTimeHours += actualWorkTimeMinutes / 60;
 			// 分を60で除算したときの余り → 分を算出する。
 			actualWorkTimeMinutes = actualWorkTimeMinutes % 60; // 余りが分になる
+			totalActualWorkTimeMinutes = totalActualWorkTimeMinutes % 60;
 
 			// 算出した値を画面へ表示する形式にする hh:mm
 			StringBuffer actualWorkTime = new StringBuffer();
 			actualWorkTime.append(CommonUtils.padWithZero(String.valueOf(actualWorkTimeHours), 2));
 			actualWorkTime.append(colon);
 			actualWorkTime.append(CommonUtils.padWithZero(String.valueOf(actualWorkTimeMinutes), 2));
+			
+			StringBuffer totalActualWorkTime = new StringBuffer();
+			totalActualWorkTime.append(CommonUtils.padWithZero(String.valueOf(totalActualWorkTimeHours), 2));
+			totalActualWorkTime.append(colon);
+			totalActualWorkTime.append(CommonUtils.padWithZero(String.valueOf(totalActualWorkTimeMinutes), 2));
 
 			/*
 			 * 時間外時間算出のために
@@ -239,4 +254,55 @@ public class WorkRecordLogic {
 			}
 		}
 	}
+	
+	 public String calculateTotalActualWorkTime(List<WorkRecordInputBean> workRecordList) throws ParseException {
+	        
+	    	final String colon = ":";
+	    	
+	    	long totalActualWorkTimeMinutes = 0;
+			long totalActualWorkTimeHours = 0;
+
+	        // 各勤務日について実働時間を計算
+	        for (WorkRecordInputBean workRecord : workRecordList) {
+	            String startTime = workRecord.getStartTime();
+	            String endTime = workRecord.getEndTime();
+	            String breakTime = workRecord.getBreakTime();
+
+	            // 開始時間、終了時間、休憩時間がすべて存在する場合のみ計算
+	            
+	            if (CheckUtils.isEmpty(startTime) || CheckUtils.isEmpty(endTime) || CheckUtils.isEmpty(breakTime)) {
+					// 入力なしの場合次へ
+					continue;
+				}
+	            
+	                // 開始時間、終了時間、休憩時間を分に変換
+	            long startTimeLong = CommonUtils.getSecond(startTime);
+				long endTimeLong = CommonUtils.getSecond(endTime);
+				long breakTimeLong = CommonUtils.getSecond(breakTime);
+
+	                // 実働時間(終了時間 - 開始時間 - 休憩時間)
+	                long actualWorkTimeSeconds =(endTimeLong - startTimeLong - breakTimeLong);
+
+	                // マイナスの時間が出た場合は0にする
+	                if (actualWorkTimeSeconds < 0) {
+	                    actualWorkTimeSeconds = 0;
+	                }
+
+	                // 実働時間を合計に加算
+	                totalActualWorkTimeMinutes += actualWorkTimeSeconds / 60;
+	                
+	        }
+	        
+	        totalActualWorkTimeHours = totalActualWorkTimeMinutes / 60;
+	        totalActualWorkTimeMinutes = totalActualWorkTimeMinutes % 60;
+
+	        // 合計実働時間を "hh:mm" 形式に変換
+	        StringBuffer totalActualWorkTime = new StringBuffer();
+			totalActualWorkTime.append(CommonUtils.padWithZero(String.valueOf(totalActualWorkTimeHours), 2));
+			totalActualWorkTime.append(colon);
+			totalActualWorkTime.append(CommonUtils.padWithZero(String.valueOf(totalActualWorkTimeMinutes), 2));
+
+	        return totalActualWorkTime.toString();
+	    }
+
 }
