@@ -182,7 +182,7 @@ public class WorkRecordInputInitAction extends Action {
             workRecordInputBean.setEndTime(workRecordDto.getEndTime());
             workRecordInputBean.setBreakTime(workRecordDto.getBreakTime());
             workRecordInputBean.setActualWorkTime(workRecordDto.getActualWorkTime());
-            workRecordInputBean.setTotalActualWorkTime(workRecordDto.getTotalActualWorkTime());
+            
             workRecordInputBean.setOverTime(workRecordDto.getOverTime());
             workRecordInputBean.setHolidayTime(workRecordDto.getHolidayTime());
             workRecordInputBean.setRemark(workRecordDto.getRemark());
