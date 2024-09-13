@@ -206,8 +206,8 @@ if (listSize > intShowLength) {
               <input value="印刷" type="button" class="smallButton"  onclick="submitPrint('/kikin-for-Struts-bug/monthlyShiftCheckPrint.do')" /><!-- 2024/08/26/尾崎Printのスペルミス -->
 	          <!-- 2024/09/02/宮平/submitSearch()をsubmitSearch('/kikin-for-Struts-bug/monthlyShiftCheckPrint.do')に書き換え -->
             </td>
-            <td id="footCenter" style="text-align: right;">
-            	              <p class="copyRight">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</p>
+            <td id="footCenter" style="text-align: center;">
+            	  <p class="copyRight">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</p>
             </td>
             <td id="footRight">
             </td>
