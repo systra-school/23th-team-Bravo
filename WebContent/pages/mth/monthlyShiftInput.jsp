@@ -464,7 +464,12 @@ if (listSize > intShowLength) {
         </html:form>
       </div>
       <div id="loadingImage">
-        <img src="/kikin-for-Struts-bug/pages/img/しばし待て.gif" alt="Loading...">
+    <img src="/kikin-for-Struts-bug/pages/img/miya_fetch3.gif" alt="Loading...">
+       
+        <audio autoplay>
+    <source src="/kikin-for-Struts-bug/pages/audio/マイムービー 3.mp3" type="audio/mp3">
+</audio>
+
       </div>
       <div id="footer">
         <table>
