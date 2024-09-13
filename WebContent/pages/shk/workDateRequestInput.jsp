@@ -257,10 +257,10 @@
         <table>
           <tr>
             <td id="footLeft">
-              　
+              
             </td>
             <td id="footCenter">
-              　
+	              　<p class="copyRight">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</p>
             </td>
             <td id="footRight">
     	        <input value="出勤希望日参照" type="button" class="longButton"  onclick="openSearch()" />

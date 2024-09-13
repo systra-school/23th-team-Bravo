@@ -230,7 +230,7 @@
               　
             </td>
             <td id="footCenter">
-              　
+	              <p class="copyRight">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</p>
             </td>
             <td id="footRight">
               <input value="新規登録" type="button" class="smallButton"  onclick="shiftMstMntRegisterInit()" />

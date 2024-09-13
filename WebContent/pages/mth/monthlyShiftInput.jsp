@@ -477,7 +477,7 @@ if (listSize > intShowLength) {
 	        </div>
             </td>
             <td id="footCenter" style="text-align: right;">
-
+	              <p class="copyRight">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</p>
             </td>
             <td id="footRight">
             <!-- 2024/09/02/尾崎/onclickの修正 -->

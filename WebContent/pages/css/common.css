@@ -104,6 +104,10 @@ errorbody {
     width:400px;
     text-align:right;
 }
+
+.copyRight{
+	font-size:12px;
+}
 /*
 * エラーページ ヘッダー、フッター共通定義
 */

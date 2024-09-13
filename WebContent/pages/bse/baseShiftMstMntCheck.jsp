@@ -58,7 +58,7 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="margin-top:24px;">
         <html:form action="/baseShiftRegister" >
           <%-- 凡例 --%>
           <div id="pattern" style="width:476px; margin-left:20%; float:left">
