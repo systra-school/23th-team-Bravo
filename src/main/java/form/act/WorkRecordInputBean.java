@@ -37,6 +37,8 @@ public class WorkRecordInputBean {
     private String breakTime;
     /** 実働時間 */
     private String actualWorkTime;
+    
+    private String totalActualWorkTime;
     /** 時間外時間 */
     private String overTime;
     /** 休日時間 */
@@ -149,5 +151,11 @@ public class WorkRecordInputBean {
 	}
 	public void setPublicHolidayFlg(boolean publicHolidayFlg) {
 		this.publicHolidayFlg = publicHolidayFlg;
+	}
+	public String getTotalActualWorkTime() {
+		return totalActualWorkTime;
+	}
+	public void setTotalActualWorkTime(String totalActualWorkTime) {
+		this.totalActualWorkTime = totalActualWorkTime;
 	}
 }
