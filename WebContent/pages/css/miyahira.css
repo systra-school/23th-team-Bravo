@@ -8,3 +8,7 @@ body {
     height: 120px;
     margin-left: 10px;
 }
+
+.ura:hover {
+	opacity: .5;
+}

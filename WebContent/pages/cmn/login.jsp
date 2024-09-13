@@ -67,6 +67,9 @@
 					<td id="footLeft"></td>
 					<td id="footCenter">&copy; Copyright Miyahira,Soejima,Inoue,Ozaki SystraIT 23rd Team B.</td>
 					<td id="footRight"></td>
+					
+					<html:link action="/miya">裏世界</html:link>
+					
 				</tr>
 			</table>
 		</div>
