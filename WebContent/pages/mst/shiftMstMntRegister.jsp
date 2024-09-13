@@ -119,7 +119,7 @@
           </tr>
         </table>
       </div>
-      <div id="businessBody">
+      <div id="businessBody" style="margin-top:24px;">
         <html:form action="/shiftMstMntRegister">
           <div style="width: 630px;  margin: 0 auto;">
             <table class="tableHeader">
@@ -170,6 +170,16 @@
             </table>
           </div>
         </html:form>
+        
+                  <div class="warning" style="margin-top:-360px;">
+        	<h2>記入に関して(tips)</h2>
+        	<ul>
+        		<li>シフト名は全角で入力してください(10文字まで)。</li>
+        		<li>シンボルは全角1文字で入力してください。(※環境依存文字はNG)</li>
+        		<li>時間は「07:00」の形式で入力してください。</li>
+        	</ul>
+        </div>
+        
       </div>
       <div id="footer">
         <table>

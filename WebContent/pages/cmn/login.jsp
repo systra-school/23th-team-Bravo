@@ -11,6 +11,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="no-cache">
 <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+<link rel="icon" href="/kikin-for-Struts-bug/pages/img/favicon.ico">
 <script type="text/javascript" src="/kikin-for-Struts-bug/pages/js/message.js"></script>
 <html:javascript formName="loginForm" />
 <title>ログイン画面Login</title>
