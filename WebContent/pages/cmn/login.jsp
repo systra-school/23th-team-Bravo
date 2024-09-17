@@ -28,6 +28,9 @@
   	var msg = getMessageCodeOnly('E-MSG-000002');
     alert(msg);
   </script>
+  
+   
+    
 	<%
   session.setAttribute("error", null);}%>
 
@@ -60,7 +63,82 @@
 				</html:form>
 				</div>
 			</div>
+			<div id="slotMachine" style="display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; font-family: Arial, sans-serif;">
+        <div class="reel" id="reel1">1</div>
+        <div class="reel" id="reel2">2</div>
+        <div class="reel" id="reel3">3</div>
+        <button id="spinButton">止める！</button>
+        <div id="result"></div>
+        <!-- 勝利時に表示する画像 -->
+        <img id="winImage" src="https://example.com/winning-image.png" alt="You Win!" width="200">
+    </div>
+    
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
+            const symbols = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            let intervals = [];
+            let stoppedReels = 0;
+            let reelIndices = [0, 0, 0]; // 各リールの現在のシンボルのインデックス
+
+            function startReel(reelId, reelIndex) {
+                return setInterval(() => {
+                    // 次のシンボルに移動
+                    reelIndices[reelIndex] = (reelIndices[reelIndex] + 1) % symbols.length;
+                    const nextSymbol = symbols[reelIndices[reelIndex]];
+                    document.getElementById(reelId).textContent = nextSymbol;
+                }, 300); // リールの回転速度
+            }
+
+            function startAllReels() {
+                intervals[0] = startReel('reel1', 0);
+                intervals[1] = startReel('reel2', 1);
+                intervals[2] = startReel('reel3', 2);
+                stoppedReels = 0;
+            }
+
+            function stopReel() {
+                if (stoppedReels < intervals.length) {
+                    clearInterval(intervals[stoppedReels]);
+                    stoppedReels++;
+                    if (stoppedReels === intervals.length) {
+                        checkResult();
+                    }
+                }
+            }
+
+            function checkResult() {
+                const reel1 = document.getElementById('reel1').textContent;
+                const reel2 = document.getElementById('reel2').textContent;
+                const reel3 = document.getElementById('reel3').textContent;
+
+                if (reel1 === "7" && reel2 === "7" && reel3 === "7") {
+                    document.getElementById('result').textContent = 'Jackpot! You Win!';
+                    document.getElementById('winImage').style.display = 'block';
+                } else {
+                    document.getElementById('result').textContent = '７を狙え！！！';
+                }
+                document.getElementById('spinButton').textContent = 'もう一回！';
+            }
+
+            document.getElementById('spinButton').addEventListener('click', () => {
+                if (stoppedReels < intervals.length) {
+                    stopReel();
+                } else {
+                    startAllReels();
+                    document.getElementById('winImage').style.display = 'none';
+                    document.getElementById('result').textContent = '';
+                    document.getElementById('spinButton').textContent = 'Stop!';
+                }
+            });
+
+            startAllReels();
+        });
+    </script>
+    
 		</div>
+		
+		
+    
 		<div id="footer">
 			<table>
 				<tr>

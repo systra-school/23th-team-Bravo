@@ -24,6 +24,20 @@ errorbody {
     transform: translate(-50%, -50%);
     z-index: 1000;
   }
+  
+  #slotMachine {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .reel {
+            font-size: 2em;
+            display: inline-block;
+            width: 50px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
 
 /*
 * ヘッダー、フッター共通定義
@@ -187,10 +201,49 @@ errorbody {
 }
 
 .bigButton:hover {
-	background-color:#ccf;
+	background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+	animation: rainbowMove 3s linear infinite;
 	color:#111;
 }
 
+.reel {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            font-size: 4em;
+            margin: 0 10px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-image: url('/kikin-for-Struts-bug/pages/img/tranp.png'); 
+            background-size: cover; /* 画像をリール全体にフィットさせる */
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #spinButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: #ffd700; /* 金色 */
+            border: none;
+            color: #111;
+            transition: all 0.3s ease;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        #winImage {
+            display: none; /* 最初は非表示 */
+            margin-top: 20px;
+        }
 /*
 * ボタンサイズロング
 */
