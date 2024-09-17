@@ -70,7 +70,7 @@
         <button id="spinButton">止める！</button>
         <div id="result"></div>
         <!-- 勝利時に表示する画像 -->
-        <img id="winImage" src="https://example.com/winning-image.png" alt="You Win!" width="200">
+        <img id="winImage" src="/kikin-for-Struts-bug/pages/img/atari.png" alt="You Win!" width="200">
     </div>
     
     <script type="text/javascript">
@@ -112,8 +112,16 @@
                 const reel3 = document.getElementById('reel3').textContent;
 
                 if (reel1 === "7" && reel2 === "7" && reel3 === "7") {
-                    document.getElementById('result').textContent = 'Jackpot! You Win!';
+                    document.getElementById('result').textContent = 'You Win!';
                     document.getElementById('winImage').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('winImage').style.display = 'none'; // フルスクリーン画像を非表示
+                        document.getElementById('result').textContent = '';
+                        startAllReels(); // リールを再び回転させる
+                        document.getElementById('spinButton').textContent = 'Stop!';
+                    }, 3000); // 3000ミリ秒（3秒）
+                
+                
                 } else {
                     document.getElementById('result').textContent = '７を狙え！！！';
                 }
