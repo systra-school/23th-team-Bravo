@@ -10,11 +10,13 @@
 
 	<body>
 	
+		<a href="/kikin-for-Struts-bug/pages/miya_play/kumiin.jsp" class="ura"><img src="/kikin-for-Struts-bug/pages/miya_play/modoru.png" alt="戻る" width="100px" height="50px" align="left"></a>
+	
 		<img alt="デザインリーダー" src="/kikin-for-Struts-bug/pages/miya_play/oisipikumin-removebg-preview.png" align="left">
 		
 		<div id="setumei">
 		
-		<img alt="大石説明" src="/kikin-for-Struts-bug/pages/miya_play/大石説明.png">
+		<img alt="大石説明" src="/kikin-for-Struts-bug/pages/miya_play/大石説明1.png" width="1000px" height="600px">
 	
 	</div>
 	</body>
