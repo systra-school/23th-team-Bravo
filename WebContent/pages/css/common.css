@@ -194,14 +194,15 @@ errorbody {
     width: 200px;
     height: 50px;
     border-radius: 30px;
-	background-color:#006;
+	/*background-color:#006;*/
+	background: linear-gradient(45deg, violet, indigo, blue);
 	color:#ECECEC;
-	border:2px solid #111;
+	border:2px solid #fff;
 	
 }
 
 .bigButton:hover {
-	background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+	background: linear-gradient(45deg, red, orange, yellow);
 	animation: rainbowMove 3s linear infinite;
 	color:#111;
 }
