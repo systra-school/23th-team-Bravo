@@ -208,9 +208,9 @@ errorbody {
 
 .reel {
             display: inline-block;
-            width: 150px;
-            height: 150px;
-            font-size: 4em;
+            width: 300px;
+            height: 200px;
+            font-size: 8em;
             margin: 0 10px;
             border: 2px solid #333;
             border-radius: 10px;
